@@ -1,3 +1,5 @@
+const ul = document.getElementById('eltlist');
+const produitConst = document.getElementById('produitlist');
 
 class Camera {
 
@@ -18,6 +20,7 @@ class Camera {
         this.lenses = [];
         Object.assign(this, cameraData);
         this.container = undefined;
+        // this.contenairproduit = undefined;
         console.log(this, cameraData);
     }
 
@@ -25,9 +28,9 @@ class Camera {
 
     display(type){
         //    afficher la camera dans le DOM
-        console.log("prix :" + this.price);
         const template = this._getTemplate(type);
         this.container.appendChild(template);
+        // this.contenairproduit.appendChild(template);
     }
 
     /**
@@ -42,47 +45,93 @@ class Camera {
 
                 //création du li
                 const li = document.createElement('li');
+                li.classList.add('containerpoduit');
                 li.id = this._id;
-                li.href = 'produit.html'
-                li.classList.add('row');
+                // li.classList.add('border','border-black', 'mt-5');
 
-                //création du lien vers la page produit.html
+
+                //création du lien
                 const link = document.createElement('a');
-                link.href = 'produit.html';
-                link.innerText = this.name;
-                div.appendChild(link);
-
+                link.setAttribute('href',`produits.html?id=${this._id}`);
+                // link.classList.add('row','text-decoration-none','containerproduit');
+                li.appendChild(link);
 
                 // const test = document.createElement("button");
                 // test.innerText = 'test';
                 // test.addEventListener('click', this._onTestClick.bind(this) );
                 // li.appendChild(test);
 
+                //création de la div
                 const div = document.createElement('div')
-                li.appendChild(div)
+                div.classList.add('containerdesc');
+                link.appendChild(div)
 
-
+                //création du container de l'img
                 const img = document.createElement('img');
                 img.src = this.imageUrl;
                 img.classList.add('imgSize');
-                li.appendChild(img);
+                link.appendChild(img);
 
+                //création du h2
+                const title = document.createElement('h2');
+                title.innerText = this.name;
+                div.appendChild(title);
 
+                //création du paragraphe description
                 const description = document.createElement('p');
                 description.innerText = this.description;
                 div.appendChild(description);
 
-
+                //création du paragraphe prix
                 const prix = document.createElement('p');
-                prix.innerText = this.price + '€';
+                prix.innerText = this.price/100 + ' €';
                 div.appendChild(prix);
 
                 return li;
 
                 break;
+
             case "produit" :
                 //template produit
+
+                const divContainer = document.createElement('div');
+                divContainer.classList.add('row','border','border-black');
+
+                const divImageProduit = document.createElement('div');
+                divImageProduit.classList.add('col','border','border-black');
+                divContainer.appendChild(divImageProduit);
+
+                const divTitleDescProduit = document.createElement('div');
+                divTitleDescProduit.classList.add('col','border','border-black');
+                divContainer.appendChild(divTitleDescProduit);
+
+                //création du container de l'img
+                const imgproduit = document.createElement('img');
+                imgproduit.src = this.imageUrl;
+                imgproduit.classList.add('imgSize',);
+                divImageProduit.appendChild(imgproduit);
+
+                // //création du h2
+                const titleproduit = document.createElement('h2');
+                titleproduit.textContent = this.name;
+                divTitleDescProduit.appendChild(titleproduit);
+                //
+
+                // //création du paragraphe description
+                const descriptionproduit = document.createElement('p');
+                descriptionproduit.innerText = this.description;
+                divTitleDescProduit.appendChild(descriptionproduit);
+                //
+                //
+                // //création du paragraphe prix
+                const prixproduit = document.createElement('p');
+                prixproduit.innerText = this.price/100 + ' €';
+                divTitleDescProduit.appendChild(prixproduit);
+
+                return divContainer;
+
                 break;
+
             default :
                 throw 'Aucun template n\'est défini';
         }
@@ -92,9 +141,20 @@ class Camera {
      *
      * @param {HTMLElement} container
      */
-    setContainer (container){
+    setContainer (container ){
         this.container = container;
+
     }
+
+
+
+    /**
+     *
+     * @param contenairproduit
+     */
+    // setContenairProduit (contenairproduit){
+    //     this.contenairproduit = contenairproduit;
+    // }
 
     _onTestClick (){
         console.log('clicktest');
