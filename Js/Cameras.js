@@ -45,15 +45,14 @@ class Camera {
 
                 //création du li
                 const li = document.createElement('li');
-                li.classList.add('containerpoduit');
                 li.id = this._id;
-                // li.classList.add('border','border-black', 'mt-5');
+                li.setAttribute('id','containerpoduit');
 
 
                 //création du lien
                 const link = document.createElement('a');
                 link.setAttribute('href',`produits.html?id=${this._id}`);
-                // link.classList.add('row','text-decoration-none','containerproduit');
+                link.classList.add('row','text-decoration-none','containerproduit');
                 li.appendChild(link);
 
                 // const test = document.createElement("button");
@@ -61,31 +60,49 @@ class Camera {
                 // test.addEventListener('click', this._onTestClick.bind(this) );
                 // li.appendChild(test);
 
+                //création de la div container image
+                const divImg = document.createElement('div');
+                divImg.classList.add('col-4');
+                link.appendChild(divImg);
+
+
                 //création de la div
                 const div = document.createElement('div')
-                div.classList.add('containerdesc');
+                div.classList.add('containerdesc','col-6');
+                div.setAttribute('id','divProduit');
                 link.appendChild(div)
+
+
+                //création de la div container prix
+                const divPrix = document.createElement('div');
+                divPrix.classList.add('col-2');
+                link.appendChild(divPrix);
+                divPrix.setAttribute('id','divPrix');
+
 
                 //création du container de l'img
                 const img = document.createElement('img');
                 img.src = this.imageUrl;
                 img.classList.add('imgSize');
-                link.appendChild(img);
+                divImg.appendChild(img);
 
                 //création du h2
                 const title = document.createElement('h2');
                 title.innerText = this.name;
                 div.appendChild(title);
+                title.setAttribute('id','titreProduit');
 
                 //création du paragraphe description
                 const description = document.createElement('p');
                 description.innerText = this.description;
                 div.appendChild(description);
+                description.setAttribute('id','paraProduit');
 
                 //création du paragraphe prix
                 const prix = document.createElement('p');
                 prix.innerText = this.price/100 + ' €';
-                div.appendChild(prix);
+                divPrix.appendChild(prix);
+                prix.setAttribute('id', 'prix')
 
                 return li;
 
@@ -94,16 +111,17 @@ class Camera {
             case "produit" :
                 //template produit
 
-                const divContainer = document.createElement('div');
+                const divContainer = document.getElementById('divContainer');
                 divContainer.classList.add('row','border','border-black');
 
-                const divImageProduit = document.createElement('div');
+                const divImageProduit = document.getElementById('divImageProduit');
                 divImageProduit.classList.add('col','border','border-black');
                 divContainer.appendChild(divImageProduit);
 
-                const divTitleDescProduit = document.createElement('div');
+                const divTitleDescProduit = document.getElementById('divTitleDescProduit');
                 divTitleDescProduit.classList.add('col','border','border-black');
                 divContainer.appendChild(divTitleDescProduit);
+
 
                 //création du container de l'img
                 const imgproduit = document.createElement('img');
@@ -111,18 +129,19 @@ class Camera {
                 imgproduit.classList.add('imgSize',);
                 divImageProduit.appendChild(imgproduit);
 
+
                 // //création du h2
                 const titleproduit = document.createElement('h2');
                 titleproduit.textContent = this.name;
                 divTitleDescProduit.appendChild(titleproduit);
-                //
+
 
                 // //création du paragraphe description
                 const descriptionproduit = document.createElement('p');
                 descriptionproduit.innerText = this.description;
                 divTitleDescProduit.appendChild(descriptionproduit);
-                //
-                //
+
+
                 // //création du paragraphe prix
                 const prixproduit = document.createElement('p');
                 prixproduit.innerText = this.price/100 + ' €';
@@ -156,7 +175,7 @@ class Camera {
     //     this.contenairproduit = contenairproduit;
     // }
 
-    _onTestClick (){
-        console.log('clicktest');
-    }
+    // _onTestClick (){
+    //     console.log('clicktest');
+    // }
 }
