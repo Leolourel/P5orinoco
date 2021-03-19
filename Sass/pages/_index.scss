@@ -4,6 +4,15 @@
    max-width: 100%;
 }
 
+.titleIndex{
+  margin-top: 50px;
+  font-size: 2rem;
+  font-family: "Arial Black" ;
+  &__description{
+
+  }
+}
+
 /* id element page index */
 
 #titreProduit{
@@ -27,8 +36,6 @@
   flex-direction: column;
   align-content: space-between;
   width: 90%;
-  //height: 200px;
-  border: 2px solid black;
   margin-bottom: 50px;
   margin-top: 50px;
 }
@@ -43,6 +50,7 @@
 
 #prix {
   text-align: center;
+  font-size: 1.5rem;
   //height: 200px;
 }
 
@@ -51,4 +59,9 @@
   flex-direction: column;
   align-content: center;
   justify-content: space-evenly;
+}
+
+#containerLink{
+  background-color: #E9F3EB;
+  border: 2px solid black;
 }

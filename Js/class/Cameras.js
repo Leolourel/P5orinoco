@@ -1,7 +1,5 @@
-const ul = document.getElementById('eltlist');
-const produitConst = document.getElementById('produitlist');
 
-class Camera {
+export default class Camera {
 
 
     /**
@@ -20,17 +18,17 @@ class Camera {
         this.lenses = [];
         Object.assign(this, cameraData);
         this.container = undefined;
-        // this.contenairproduit = undefined;
-        console.log(this, cameraData);
     }
 
 
-
+    /**
+     *
+     * @param type
+     */
     display(type){
         //    afficher la camera dans le DOM
         const template = this._getTemplate(type);
         this.container.appendChild(template);
-        // this.contenairproduit.appendChild(template);
     }
 
     /**
@@ -52,6 +50,7 @@ class Camera {
                 //création du lien
                 const link = document.createElement('a');
                 link.setAttribute('href',`produits.html?id=${this._id}`);
+                link.setAttribute('id', 'containerLink')
                 link.classList.add('row','text-decoration-none','containerproduit');
                 li.appendChild(link);
 
@@ -66,7 +65,7 @@ class Camera {
                 link.appendChild(divImg);
 
 
-                //création de la div
+                //création de la div description
                 const div = document.createElement('div')
                 div.classList.add('containerdesc','col-6');
                 div.setAttribute('id','divProduit');
