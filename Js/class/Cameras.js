@@ -111,14 +111,14 @@ export default class Camera {
                 //template produit
 
                 const divContainer = document.getElementById('divContainer');
-                divContainer.classList.add('row','border','border-black');
+                divContainer.classList.add('row');
 
                 const divImageProduit = document.getElementById('divImageProduit');
-                divImageProduit.classList.add('col','border','border-black');
+                divImageProduit.classList.add('col');+
                 divContainer.appendChild(divImageProduit);
 
                 const divTitleDescProduit = document.getElementById('divTitleDescProduit');
-                divTitleDescProduit.classList.add('col','border','border-black');
+                divTitleDescProduit.classList.add('col');
                 divContainer.appendChild(divTitleDescProduit);
 
 
@@ -126,7 +126,22 @@ export default class Camera {
                 const imgproduit = document.createElement('img');
                 imgproduit.src = this.imageUrl;
                 imgproduit.classList.add('imgSize',);
-                divImageProduit.appendChild(imgproduit);
+                divImageProduit.prepend(imgproduit);
+
+                const titleTest = document.createElement('h2');
+                titleTest.innerText = "test2";
+                divImageProduit.appendChild(titleTest);
+
+
+                // création de l'option lentille
+                const select = document.getElementById('lensesOption');
+                for( let i = 0; i < this.lenses.length; i++) {
+
+                    const option = document.createElement("option");
+                    option.setAttribute("value", this.lenses[i]);
+                    option.textContent = this.lenses[i];
+                    select.appendChild(option);
+                };
 
 
                 // //création du h2
@@ -146,6 +161,12 @@ export default class Camera {
                 prixproduit.innerText = this.price/100 + ' €';
                 divTitleDescProduit.appendChild(prixproduit);
 
+                //Button ajout au panier
+                const addPanier = document.createElement("button");
+                addPanier.innerText = 'Ajouter au panier';
+                addPanier.addEventListener('click', this._onTestClick.bind(this) );
+                divTitleDescProduit.appendChild(addPanier);
+
                 return divContainer;
 
                 break;
@@ -164,17 +185,7 @@ export default class Camera {
 
     }
 
-
-
-    /**
-     *
-     * @param contenairproduit
-     */
-    // setContenairProduit (contenairproduit){
-    //     this.contenairproduit = contenairproduit;
-    // }
-
-    // _onTestClick (){
-    //     console.log('clicktest');
-    // }
+    _onTestClick (){
+        console.log('clicktest');
+    }
 }

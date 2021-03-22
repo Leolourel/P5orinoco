@@ -12,5 +12,4 @@ fetch("http://localhost:3000/api/cameras")
              camera.display('index');
         })
     });
-    // .catch(error => alert("Erreur : " + error));
 

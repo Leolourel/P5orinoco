@@ -60,6 +60,19 @@
   border: 2px solid black;
 }
 
+#divImageProduit {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#divTitleDescProduit {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 a {
   text-decoration: none;
 }

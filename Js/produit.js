@@ -13,4 +13,4 @@ fetch("http://localhost:3000/api/cameras/" + productId)
         console.log(camera)
     });
 
-console.log(productId);
+
