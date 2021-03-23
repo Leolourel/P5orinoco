@@ -7,7 +7,6 @@
     <list default="true" id="023bddac-7008-4058-97f4-359b566de314" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Cameras.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Cameras.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/produit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/produit.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,7 @@
       <workItem from="1616427706408" duration="542000" />
       <workItem from="1616428601781" duration="1867000" />
       <workItem from="1616430501395" duration="12000" />
-      <workItem from="1616430525672" duration="8987000" />
+      <workItem from="1616430525672" duration="10181000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit">
       <created>1614779559535</created>
@@ -153,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616509908566</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Réorganisation template index class Camera">
+      <created>1616511191772</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1616511191772</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +202,7 @@
     <MESSAGE value="url product id recuperer" />
     <MESSAGE value="commit add files" />
     <MESSAGE value="réorganisation jsdoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="réorganisation jsdoc" />
+    <MESSAGE value="Réorganisation template index class Camera" />
+    <option name="LAST_COMMIT_MESSAGE" value="Réorganisation template index class Camera" />
   </component>
 </project>

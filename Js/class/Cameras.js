@@ -57,7 +57,6 @@ export default class Camera {
                 li.id = this._id;
                 img.src = this.imageUrl;
 
-
                 //Ajout des Attributs
                 li.setAttribute('id','containerpoduit');
                 link.setAttribute('href',`produits.html?id=${this._id}`);
@@ -75,13 +74,12 @@ export default class Camera {
                 divPrix.classList.add('col-2');
                 img.classList.add('imgSize');
 
-
                 //Personnalisation du text
                 title.innerText = this.name;
                 description.innerText = this.description;
                 prix.innerText = this.price/100 + ' €';
 
-                //Création du noeud
+                //Création des noeud
                 li.appendChild(link);
                 link.appendChild(divImg);
                 link.appendChild(div);
@@ -91,124 +89,53 @@ export default class Camera {
                 div.appendChild(description);
                 divPrix.appendChild(prix);
 
-
-                //création du li
-                // const li = document.createElement('li');
-                // li.id = this._id;
-                // li.setAttribute('id','containerpoduit');
-
-
-                //création du lien
-                // const link = document.createElement('a');
-                // link.setAttribute('href',`produits.html?id=${this._id}`);
-                // link.setAttribute('id', 'containerLink')
-                // link.classList.add('row','text-decoration-none','containerproduit');
-                // li.appendChild(link);
-
-                // const test = document.createElement("button");
-                // test.innerText = 'test';
-                // test.addEventListener('click', this._onTestClick.bind(this) );
-                // li.appendChild(test);
-
-                //création de la div container image
-                // const divImg = document.createElement('div');
-                // divImg.classList.add('col-4');
-                // link.appendChild(divImg);
-
-
-                //création de la div description
-                // const div = document.createElement('div')
-                // div.classList.add('containerdesc','col-6');
-                // div.setAttribute('id','divProduit');
-                // link.appendChild(div)
-
-
-                //création de la div container prix
-                // const divPrix = document.createElement('div');
-                // divPrix.classList.add('col-2');
-                // link.appendChild(divPrix);
-                // divPrix.setAttribute('id','divPrix');
-
-
-                //création du container de l'img
-                // const img = document.createElement('img');
-                // img.src = this.imageUrl;
-                // img.classList.add('imgSize');
-                // divImg.appendChild(img);
-
-                //création du h2
-                // const title = document.createElement('h2');
-                // title.innerText = this.name;
-                // div.appendChild(title);
-                // title.setAttribute('id','titreProduit');
-
-                //création du paragraphe description
-                // const description = document.createElement('p');
-                // description.innerText = this.description;
-                // div.appendChild(description);
-                // description.setAttribute('id','paraProduit');
-
-                //création du paragraphe prix
-                // const prix = document.createElement('p');
-                // prix.innerText = this.price/100 + ' €';
-                // divPrix.appendChild(prix);
-                // prix.setAttribute('id', 'prix')
-
                 return li;
 
                 break;
 
-            case "produit" :
-                //template produit
+            case "produit" : //template produit
 
+                //Récupération des éléments
                 const divContainer = document.getElementById('divContainer');
-                divContainer.classList.add('row');
-
                 const divImageProduit = document.getElementById('divImageProduit');
-                divImageProduit.classList.add('col');+
-                divContainer.appendChild(divImageProduit);
-
                 const divTitleDescProduit = document.getElementById('divTitleDescProduit');
-                divTitleDescProduit.classList.add('col');
-                divContainer.appendChild(divTitleDescProduit);
+                const select = document.getElementById('lensesOption');
 
-
-                //création du container de l'img
+                //Création des éléments
                 const imgproduit = document.createElement('img');
+                const titleproduit = document.createElement('h2');
+                const descriptionproduit = document.createElement('p');
+                const prixproduit = document.createElement('p');
                 imgproduit.src = this.imageUrl;
-                imgproduit.classList.add('img-fluid');
-                divImageProduit.appendChild(imgproduit);
 
+                //Ajout des class
+                divContainer.classList.add('row');
+                divImageProduit.classList.add('col');+
+                divTitleDescProduit.classList.add('col');
+                imgproduit.classList.add('img-fluid');
+
+                //Personnalisation du text
+                titleproduit.textContent = this.name;
+                descriptionproduit.innerText = this.description;
+                prixproduit.innerText = this.price/100 + ' €';
+
+                //Création des noeud
+                divContainer.appendChild(divImageProduit);
+                divContainer.appendChild(divTitleDescProduit);
+                divImageProduit.appendChild(imgproduit);
+                divTitleDescProduit.appendChild(titleproduit);
+                divTitleDescProduit.appendChild(descriptionproduit);
+                divTitleDescProduit.appendChild(prixproduit);
 
                 // création de l'option lentille
-                const select = document.getElementById('lensesOption');
                 for( let i = 0; i < this.lenses.length; i++) {
-
                     const option = document.createElement("option");
                     option.setAttribute("value", this.lenses[i]);
                     option.textContent = this.lenses[i];
                     select.appendChild(option);
                 };
 
-
-                // //création du h2
-                const titleproduit = document.createElement('h2');
-                titleproduit.textContent = this.name;
-                divTitleDescProduit.appendChild(titleproduit);
-
-
-                // //création du paragraphe description
-                const descriptionproduit = document.createElement('p');
-                descriptionproduit.innerText = this.description;
-                divTitleDescProduit.appendChild(descriptionproduit);
-
-
-                // //création du paragraphe prix
-                const prixproduit = document.createElement('p');
-                prixproduit.innerText = this.price/100 + ' €';
-                divTitleDescProduit.appendChild(prixproduit);
-
-                //Button ajout au panier
+                //Création du boutton ajout au panier
                 const addPanier = document.createElement("button");
                 addPanier.innerText = 'Ajouter au panier';
                 addPanier.addEventListener('click', this._addBasket.bind(this) );
