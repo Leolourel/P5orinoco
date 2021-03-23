@@ -44,18 +44,66 @@ export default class Camera {
         switch (type){
             case "index": //template index
 
-                //création du li
+                //Création des éléments
                 const li = document.createElement('li');
+                const link = document.createElement('a');
+                const divImg = document.createElement('div');
+                const div = document.createElement('div')
+                const divPrix = document.createElement('div');
+                const img = document.createElement('img');
+                const title = document.createElement('h2');
+                const description = document.createElement('p');
+                const prix = document.createElement('p');
                 li.id = this._id;
+                img.src = this.imageUrl;
+
+
+                //Ajout des Attributs
                 li.setAttribute('id','containerpoduit');
+                link.setAttribute('href',`produits.html?id=${this._id}`);
+                link.setAttribute('id', 'containerLink');
+                div.setAttribute('id','divProduit');
+                divPrix.setAttribute('id','divPrix');
+                title.setAttribute('id','titreProduit');
+                description.setAttribute('id','paraProduit');
+                prix.setAttribute('id', 'prix');
+
+                //Ajout des class
+                link.classList.add('row','text-decoration-none','containerproduit');
+                divImg.classList.add('col-4');
+                div.classList.add('containerdesc','col-6');
+                divPrix.classList.add('col-2');
+                img.classList.add('imgSize');
+
+
+                //Personnalisation du text
+                title.innerText = this.name;
+                description.innerText = this.description;
+                prix.innerText = this.price/100 + ' €';
+
+                //Création du noeud
+                li.appendChild(link);
+                link.appendChild(divImg);
+                link.appendChild(div);
+                link.appendChild(divPrix);
+                divImg.appendChild(img);
+                div.appendChild(title);
+                div.appendChild(description);
+                divPrix.appendChild(prix);
+
+
+                //création du li
+                // const li = document.createElement('li');
+                // li.id = this._id;
+                // li.setAttribute('id','containerpoduit');
 
 
                 //création du lien
-                const link = document.createElement('a');
-                link.setAttribute('href',`produits.html?id=${this._id}`);
-                link.setAttribute('id', 'containerLink')
-                link.classList.add('row','text-decoration-none','containerproduit');
-                li.appendChild(link);
+                // const link = document.createElement('a');
+                // link.setAttribute('href',`produits.html?id=${this._id}`);
+                // link.setAttribute('id', 'containerLink')
+                // link.classList.add('row','text-decoration-none','containerproduit');
+                // li.appendChild(link);
 
                 // const test = document.createElement("button");
                 // test.innerText = 'test';
@@ -63,48 +111,48 @@ export default class Camera {
                 // li.appendChild(test);
 
                 //création de la div container image
-                const divImg = document.createElement('div');
-                divImg.classList.add('col-4');
-                link.appendChild(divImg);
+                // const divImg = document.createElement('div');
+                // divImg.classList.add('col-4');
+                // link.appendChild(divImg);
 
 
                 //création de la div description
-                const div = document.createElement('div')
-                div.classList.add('containerdesc','col-6');
-                div.setAttribute('id','divProduit');
-                link.appendChild(div)
+                // const div = document.createElement('div')
+                // div.classList.add('containerdesc','col-6');
+                // div.setAttribute('id','divProduit');
+                // link.appendChild(div)
 
 
                 //création de la div container prix
-                const divPrix = document.createElement('div');
-                divPrix.classList.add('col-2');
-                link.appendChild(divPrix);
-                divPrix.setAttribute('id','divPrix');
+                // const divPrix = document.createElement('div');
+                // divPrix.classList.add('col-2');
+                // link.appendChild(divPrix);
+                // divPrix.setAttribute('id','divPrix');
 
 
                 //création du container de l'img
-                const img = document.createElement('img');
-                img.src = this.imageUrl;
-                img.classList.add('imgSize');
-                divImg.appendChild(img);
+                // const img = document.createElement('img');
+                // img.src = this.imageUrl;
+                // img.classList.add('imgSize');
+                // divImg.appendChild(img);
 
                 //création du h2
-                const title = document.createElement('h2');
-                title.innerText = this.name;
-                div.appendChild(title);
-                title.setAttribute('id','titreProduit');
+                // const title = document.createElement('h2');
+                // title.innerText = this.name;
+                // div.appendChild(title);
+                // title.setAttribute('id','titreProduit');
 
                 //création du paragraphe description
-                const description = document.createElement('p');
-                description.innerText = this.description;
-                div.appendChild(description);
-                description.setAttribute('id','paraProduit');
+                // const description = document.createElement('p');
+                // description.innerText = this.description;
+                // div.appendChild(description);
+                // description.setAttribute('id','paraProduit');
 
                 //création du paragraphe prix
-                const prix = document.createElement('p');
-                prix.innerText = this.price/100 + ' €';
-                divPrix.appendChild(prix);
-                prix.setAttribute('id', 'prix')
+                // const prix = document.createElement('p');
+                // prix.innerText = this.price/100 + ' €';
+                // divPrix.appendChild(prix);
+                // prix.setAttribute('id', 'prix')
 
                 return li;
 

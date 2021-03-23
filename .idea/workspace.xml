@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="023bddac-7008-4058-97f4-359b566de314" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Css/orinoco.css" beforeDir="false" afterPath="$PROJECT_DIR$/Css/orinoco.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Css/orinoco.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Css/orinoco.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Cameras.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Cameras.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/class/Panier.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Panier.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/produit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/produit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sass/pages/_produits.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Sass/pages/_produits.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +74,7 @@
       <workItem from="1616427706408" duration="542000" />
       <workItem from="1616428601781" duration="1867000" />
       <workItem from="1616430501395" duration="12000" />
-      <workItem from="1616430525672" duration="7249000" />
+      <workItem from="1616430525672" duration="8987000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit">
       <created>1614779559535</created>
@@ -151,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616430867755</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="réorganisation jsdoc">
+      <created>1616509908566</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616509908566</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +195,7 @@
     <MESSAGE value="mise en page index &quot;fini&quot;" />
     <MESSAGE value="url product id recuperer" />
     <MESSAGE value="commit add files" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit add files" />
+    <MESSAGE value="réorganisation jsdoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="réorganisation jsdoc" />
   </component>
 </project>
