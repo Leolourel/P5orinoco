@@ -9,7 +9,6 @@ let city = document.getElementById('city');
 
 
 // Définition des différentes Regex utilisées formulaire de validation
-
 let firstNameRegex =/^[a-zA-Z-\-àâäÂÄéèêëÊËîïÎÏôöÔÖùûüÛÜ\s"]+$/;
 let lastNameRegex =/^[a-zA-Z-\-àâäÂÄéèêëÊËîïÎÏôöÔÖùûüÛÜ\s"]+$/;
 let adresseRegex =/^[0-9a-zA-Z-\-àâäÂÄéèêëÊËîïÎÏôöÔÖùûüÛÜ\s",.]+$/;

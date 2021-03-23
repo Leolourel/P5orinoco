@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="023bddac-7008-4058-97f4-359b566de314" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Css/orinoco.css" beforeDir="false" afterPath="$PROJECT_DIR$/Css/orinoco.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Css/orinoco.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Css/orinoco.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html/produits.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/produits.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Cameras.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Cameras.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/class/Panier.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Panier.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/produit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/produit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sass/pages/_produits.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Sass/pages/_produits.scss" afterDir="false" />
@@ -52,10 +50,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/Orinoco" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -81,7 +79,7 @@
       <workItem from="1616427706408" duration="542000" />
       <workItem from="1616428601781" duration="1867000" />
       <workItem from="1616430501395" duration="12000" />
-      <workItem from="1616430525672" duration="316000" />
+      <workItem from="1616430525672" duration="7249000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit">
       <created>1614779559535</created>
@@ -146,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616166429454</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="commit add files">
+      <created>1616430867755</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1616430867755</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +192,7 @@
     <MESSAGE value="Commit avant réorganisation template produit js, getElement à la place de createElement" />
     <MESSAGE value="mise en page index &quot;fini&quot;" />
     <MESSAGE value="url product id recuperer" />
-    <option name="LAST_COMMIT_MESSAGE" value="url product id recuperer" />
+    <MESSAGE value="commit add files" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit add files" />
   </component>
 </project>

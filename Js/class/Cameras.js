@@ -4,10 +4,13 @@ export default class Camera {
 
     /**
      * @desc Recupere les données de la caméra
+     * @constructor
      * @param {Object} cameraData
      * @param {string} cameraData._id
      * @param {number} cameraData.price
      * @param {Array} cameraData.lenses
+     * @param {object} cameraData.imageUrl
+     * @param {string} cameraData.name
      */
     constructor(cameraData) {
         this._id = undefined;
@@ -22,11 +25,11 @@ export default class Camera {
 
 
     /**
-     *
+     * @desc afficher la camera dans le dom
      * @param type
+     * @return  {HTMLElement} Template
      */
     display(type){
-        //    afficher la camera dans le DOM
         const template = this._getTemplate(type);
         this.container.appendChild(template);
     }
@@ -34,7 +37,7 @@ export default class Camera {
     /**
      * @desc template index.html et produit.html via le dom
      * @param type
-     * @returns {HTMLLIElement}
+     * @returns {HTMLTemplateElementElement} index, produit
      * @private
      */
     _getTemplate (type){
@@ -125,12 +128,8 @@ export default class Camera {
                 //création du container de l'img
                 const imgproduit = document.createElement('img');
                 imgproduit.src = this.imageUrl;
-                imgproduit.classList.add('imgSize',);
-                divImageProduit.prepend(imgproduit);
-
-                const titleTest = document.createElement('h2');
-                titleTest.innerText = "test2";
-                divImageProduit.appendChild(titleTest);
+                imgproduit.classList.add('img-fluid');
+                divImageProduit.appendChild(imgproduit);
 
 
                 // création de l'option lentille
@@ -164,7 +163,7 @@ export default class Camera {
                 //Button ajout au panier
                 const addPanier = document.createElement("button");
                 addPanier.innerText = 'Ajouter au panier';
-                addPanier.addEventListener('click', this._onTestClick.bind(this) );
+                addPanier.addEventListener('click', this._addBasket.bind(this) );
                 divTitleDescProduit.appendChild(addPanier);
 
                 return divContainer;
@@ -177,15 +176,21 @@ export default class Camera {
     }
 
     /**
-     *
+     * @desc Container template
      * @param {HTMLElement} container
+     * @return {HTMLElement} container
      */
     setContainer (container ){
         this.container = container;
 
     }
 
-    _onTestClick (){
-        console.log('clicktest');
+    /**
+     * @desc button ajout au panier
+     * @param {function} _addBasket
+     * @todo attente de l'ajout de la class panier pour rendre le boutton fonctionnel
+     */
+    _addBasket (){
+        console.log('panierClickTest');
     }
 }

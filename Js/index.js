@@ -1,7 +1,12 @@
 import Camera from "./class/Cameras.js";
 
 
-// récupération des données avec la méthode fetch
+/**
+ * @desc récupération des données avec la méthode fetch
+ * @async
+ * @param {string} url
+ * @type {string} template Index
+ */
 fetch("http://localhost:3000/api/cameras")
     .then(response => response.json())
     .then(cameras => {
