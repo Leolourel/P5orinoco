@@ -145,6 +145,12 @@ export default class Camera {
 
                 break;
 
+            case "panier" :
+
+                return ;
+
+                break;
+
             default :
                 throw 'Aucun template n\'est défini';
         }
