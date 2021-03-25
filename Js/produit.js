@@ -1,5 +1,5 @@
 import Camera from "./class/Cameras.js";
-// import Panier from "./class/Panier";
+
 
 /**
  * @desc récupération des données avec la méthode fetch

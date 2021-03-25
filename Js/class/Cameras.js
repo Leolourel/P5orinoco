@@ -1,4 +1,4 @@
-
+import Panier from './Panier.js';
 export default class Camera {
 
 
@@ -145,12 +145,6 @@ export default class Camera {
 
                 break;
 
-            case "panier" :
-
-                return ;
-
-                break;
-
             default :
                 throw 'Aucun template n\'est défini';
         }
@@ -167,11 +161,12 @@ export default class Camera {
     }
 
     /**
-     * @desc button ajout au panier
-     * @param {function} _addBasket
-     * @todo attente de l'ajout de la class panier pour rendre le boutton fonctionnel
+     @desc bouton d'ajout au panier produit
+     @function
+     @class Panier
      */
     _addBasket (){
-        console.log('panierClickTest');
+        const panier = new Panier();
+        panier.add(this);
     }
 }
