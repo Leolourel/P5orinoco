@@ -46,6 +46,7 @@ export default class Panier {
                 window.location.reload();
             }
 
+
             else {
                 console.log('erreur panier encore plein');
             }
