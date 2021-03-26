@@ -37,19 +37,29 @@ export default class Panier {
         console.log(this);
     }
 
-    remove(camera) {
-        if(){
+    remove() {
 
+            if(window.localStorage.length > 0) {
+                window.localStorage.clear();
+                console.log('test');
+                // window.localStorage.clear();
+                window.location.reload();
+            }
+
+            else {
+                console.log('erreur panier encore plein');
+            }
+            // this._saveContentToLocaleStorage();
+            console.log(this);
+            console.log(localStorage);
         }
-        else {
 
-        }
-        this._saveContentToLocaleStorage();
-    }
 
-    totalPrice(camera){
-
-    }
+    //
+    // totalPrice(camera){
+    //     let prixPanier = 0;
+    //     prixPanier += camera.quantity
+    // }
 
 
 
@@ -58,9 +68,46 @@ export default class Panier {
      * @param type
      * @return  {HTMLElement} Template
      */
-    // display(type) {
-    //     const template = this._getTemplate(type);
-    //     this.container.appendChild(template);
+    // display(basketFromStorage, camera) {          if panier.length > 0     -> display
+    //     // const template = this._getTemplate(type);
+    //     // this.container.appendChild(template);
+    //     if (basketFromStorage !== null){
+    //
+    //         productsInBasket.forEach(camera => {
+    //
+    //                         const containerHtmlPanier = document.getElementById('panier');
+    //
+    //             //Container principal
+    //                         const containerPanier = document.createElement('div');
+    //                         containerPanier.classList.add('row');
+    //                         containerHtmlPanier.appendChild(containerPanier);
+    //
+    //             //
+    //             //             //Container Image
+    //                         const containerPanierImage = document.createElement('div');
+    //                         containerPanierImage.classList.add('col','border','border-dark','mh-100');
+    //                         containerPanierImage.src = $[camera.imageUrl];
+    //                         containerPanier.appendChild(containerPanierImage);
+    //             //
+    //             //             //Container reference
+    //                         const containerPanierRef = document.createElement('div');
+    //                         containerPanierRef.classList.add('col','border','border-dark','mh-100');
+    //                         containerPanierRef.textContent = $[camera._id];
+    //                         containerPanier.appendChild(containerPanierRef);
+    //             //
+    //             //             //Container prix
+    //                         const containerPanierPrix = document.createElement('div');
+    //                         containerPanierPrix.classList.add('col','border','border-dark','mh-100');
+    //                         containerPanierPrix.innerText = $[camera.price/100 + ' €'];
+    //                         containerPanier.appendChild(containerPanierPrix);
+    //
+    //
+    //
+    //
+    //         })
+    //
+    //     }
+    //
     // }
 
 

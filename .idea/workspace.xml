@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="023bddac-7008-4058-97f4-359b566de314" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Js/class/Formulaire.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Js/formulaire.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Html/panier.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/panier.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Cameras.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Cameras.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Panier.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Panier.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/panier.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/panier.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/produit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/produit.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +75,7 @@
       <workItem from="1616427706408" duration="542000" />
       <workItem from="1616428601781" duration="1867000" />
       <workItem from="1616430501395" duration="12000" />
-      <workItem from="1616430525672" duration="22276000" />
+      <workItem from="1616430525672" duration="34149000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit">
       <created>1614779559535</created>
@@ -180,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616599283804</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="mise en forme classe Panier avec patxi">
+      <created>1616662928826</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1616662928826</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +228,7 @@
     <MESSAGE value="Réorganisation template index class Camera" />
     <MESSAGE value="Réorganisation template produit class Camera" />
     <MESSAGE value="debut de la création du panier" />
-    <option name="LAST_COMMIT_MESSAGE" value="debut de la création du panier" />
+    <MESSAGE value="mise en forme classe Panier avec patxi" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise en forme classe Panier avec patxi" />
   </component>
 </project>
