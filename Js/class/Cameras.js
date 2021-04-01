@@ -23,6 +23,7 @@ export default class Camera {
         this.name = undefined;
         this.price = undefined;
         this.lenses = [];
+        this.quantity = 1;
         Object.assign(this, cameraData);
         this.container = undefined;
     }

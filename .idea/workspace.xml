@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="023bddac-7008-4058-97f4-359b566de314" name="Default Changelist" comment="">
+    <list default="true" id="0f400cc3-6492-4f28-aa7a-6123b4ad4f5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Html/panier.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/panier.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Cameras.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Cameras.js" afterDir="false" />
@@ -15,174 +12,41 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="SCSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
-  </component>
-  <component name="ProjectId" id="1pD4jBOypcxhRPpuAc9ReawAocs" />
+  <component name="ProjectId" id="1qZGg7Z77Wi8fd9cUbhVQYnjqNl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/Orinoco" />
-    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\p5orinoco\Js\class" />
-      <recent name="C:\Users\leolo\WebstormProjects\OrinocoP5\Html" />
-    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="023bddac-7008-4058-97f4-359b566de314" name="Default Changelist" comment="" />
-      <created>1614704459706</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1614704459706</updated>
-      <workItem from="1614704460786" duration="9746000" />
-      <workItem from="1614792061064" duration="58000" />
-      <workItem from="1614792120712" duration="1329000" />
-      <workItem from="1614850499460" duration="74251000" />
-      <workItem from="1616002268853" duration="14828000" />
-      <workItem from="1616427589492" duration="6000" />
-      <workItem from="1616427706408" duration="542000" />
-      <workItem from="1616428601781" duration="1867000" />
-      <workItem from="1616430501395" duration="12000" />
-      <workItem from="1616430525672" duration="34149000" />
-    </task>
-    <task id="LOCAL-00001" summary="premier commit">
-      <created>1614779559535</created>
+    <task id="LOCAL-00001" summary="Nouveau git car probleme vcs root">
+      <created>1616781664043</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1614779559535</updated>
+      <updated>1616781664043</updated>
     </task>
-    <task id="LOCAL-00002" summary="Add .idea et Backend .gitignore">
-      <created>1614792284775</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1614792284775</updated>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0f400cc3-6492-4f28-aa7a-6123b4ad4f5f" name="Default Changelist" comment="" />
+      <created>1617279806675</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617279806675</updated>
+      <workItem from="1617279807889" duration="11200000" />
     </task>
-    <task id="LOCAL-00003" summary="Structure bootsrap pratiquement terminé">
-      <created>1615289048470</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1615289048470</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Fin rdv patxi 10/03 création code orienté objet js pour constructeur">
-      <created>1615400416295</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1615400416295</updated>
-    </task>
-    <task id="LOCAL-00005" summary="test commit scss réglage probléme de compilation">
-      <created>1615478297109</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1615478297109</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Commit organisation template index">
-      <created>1615480229810</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1615480229810</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Commit avant réorganisation template produit js, getElement à la place de createElement">
-      <created>1615912194064</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1615912194064</updated>
-    </task>
-    <task id="LOCAL-00008" summary="mise en page index &quot;fini&quot;">
-      <created>1615979268128</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1615979268128</updated>
-    </task>
-    <task id="LOCAL-00009" summary="url product id recuperer">
-      <created>1616166429454</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1616166429454</updated>
-    </task>
-    <task id="LOCAL-00010" summary="commit add files">
-      <created>1616430867755</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1616430867755</updated>
-    </task>
-    <task id="LOCAL-00011" summary="réorganisation jsdoc">
-      <created>1616509908566</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1616509908566</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Réorganisation template index class Camera">
-      <created>1616511191772</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1616511191772</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Réorganisation template produit class Camera">
-      <created>1616512456484</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1616512456484</updated>
-    </task>
-    <task id="LOCAL-00014" summary="debut de la création du panier">
-      <created>1616599283804</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1616599283804</updated>
-    </task>
-    <task id="LOCAL-00015" summary="mise en forme classe Panier avec patxi">
-      <created>1616662928826</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1616662928826</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,19 +57,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="orinocofront" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -213,22 +65,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="premier commit" />
-    <MESSAGE value="premiere structure architecture dossier" />
-    <MESSAGE value="Add .idea et Backend .gitignore" />
-    <MESSAGE value="Structure bootsrap pratiquement terminé" />
-    <MESSAGE value="Fin rdv patxi 10/03 création code orienté objet js pour constructeur" />
-    <MESSAGE value="test commit scss réglage probléme de compilation" />
-    <MESSAGE value="Commit organisation template index" />
-    <MESSAGE value="Commit avant réorganisation template produit js, getElement à la place de createElement" />
-    <MESSAGE value="mise en page index &quot;fini&quot;" />
-    <MESSAGE value="url product id recuperer" />
-    <MESSAGE value="commit add files" />
-    <MESSAGE value="réorganisation jsdoc" />
-    <MESSAGE value="Réorganisation template index class Camera" />
-    <MESSAGE value="Réorganisation template produit class Camera" />
-    <MESSAGE value="debut de la création du panier" />
-    <MESSAGE value="mise en forme classe Panier avec patxi" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise en forme classe Panier avec patxi" />
+    <MESSAGE value="Nouveau git car probleme vcs root" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nouveau git car probleme vcs root" />
   </component>
 </project>

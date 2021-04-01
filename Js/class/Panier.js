@@ -1,4 +1,4 @@
-/**
+ /**
  *@desc class pour parametrer la panier
  *@class
  */
@@ -17,161 +17,71 @@ export default class Panier {
             this.content = {};
             this._saveContentToLocaleStorage();
         }
+        this.display();
     }
 
+
+     // sauvegarder le contenu dans le localStorage
     _saveContentToLocaleStorage() {
         localStorage.setItem('basket',JSON.stringify(this.content));
+        this.display();
     }
 
 
+    /**
+     * @desc fonction boutton ajout de la caméra dans le panier
+     * @param {Camera} camera
+     */
     add(camera) {
         // Si la camera n'existe pas dans le panier l'ajouter
+        console.log(camera)
         if(this.content[camera._id] === undefined){
             this.content[camera._id] = camera;
         }
         // Si elle existe deja augmenter la quantité (todo)
         else{
+            const cameraFromBasket = this.content[camera._id];
+            cameraFromBasket.quantity++;
+            this.content[camera._id] = cameraFromBasket;
             console.log('augmenter la quantité todo')
         }
         this._saveContentToLocaleStorage();
-        console.log(this);
     }
 
-    remove() {
+    /**
+     * @desc fonction supprimer la caméra du panier
+     * @todo ajouter le bouton a la page panier une fois créer
+     */
+    remove(camera) {
+        delete this.content[camera._id];
+        this._saveContentToLocaleStorage();
+    }
 
-            if(window.localStorage.length > 0) {
-                window.localStorage.clear();
-                console.log('test');
-                // window.localStorage.clear();
-                window.location.reload();
-            }
 
+     //Afficher le contenu du panier dans le DOM
+    display() {
 
-            else {
-                console.log('erreur panier encore plein');
-            }
-            // this._saveContentToLocaleStorage();
-            console.log(this);
-            console.log(localStorage);
+        for (const [_id, camera] of Object.entries(this.content)) {
+
+                let tableBasket = document.getElementById('panier');
+                let ligneProduit = document.createElement('tr');
+                tableBasket.appendChild(ligneProduit);
+                //
+                let nomProduit = document.createElement('th');
+                let prixProduit = document.createElement('th');
+                let descriptionProduit = document.createElement('th');
+
+                nomProduit.innerText = JSON.stringify(this.content[name]);
+                // prixProduit.innerText = this.content[price];
+                descriptionProduit.innerText = this.content[camera.description];
+
+                ligneProduit.appendChild(nomProduit);
+                ligneProduit.appendChild(descriptionProduit);
+                ligneProduit.appendChild(descriptionProduit);
+
+            console.log(camera);
         }
 
-
-    //
-    // totalPrice(camera){
-    //     let prixPanier = 0;
-    //     prixPanier += camera.quantity
-    // }
-
-
-
-    /**
-     * @desc afficher la camera dans le dom
-     * @param type
-     * @return  {HTMLElement} Template
-     */
-    // display(basketFromStorage, camera) {          if panier.length > 0     -> display
-    //     // const template = this._getTemplate(type);
-    //     // this.container.appendChild(template);
-    //     if (basketFromStorage !== null){
-    //
-    //         productsInBasket.forEach(camera => {
-    //
-    //                         const containerHtmlPanier = document.getElementById('panier');
-    //
-    //             //Container principal
-    //                         const containerPanier = document.createElement('div');
-    //                         containerPanier.classList.add('row');
-    //                         containerHtmlPanier.appendChild(containerPanier);
-    //
-    //             //
-    //             //             //Container Image
-    //                         const containerPanierImage = document.createElement('div');
-    //                         containerPanierImage.classList.add('col','border','border-dark','mh-100');
-    //                         containerPanierImage.src = $[camera.imageUrl];
-    //                         containerPanier.appendChild(containerPanierImage);
-    //             //
-    //             //             //Container reference
-    //                         const containerPanierRef = document.createElement('div');
-    //                         containerPanierRef.classList.add('col','border','border-dark','mh-100');
-    //                         containerPanierRef.textContent = $[camera._id];
-    //                         containerPanier.appendChild(containerPanierRef);
-    //             //
-    //             //             //Container prix
-    //                         const containerPanierPrix = document.createElement('div');
-    //                         containerPanierPrix.classList.add('col','border','border-dark','mh-100');
-    //                         containerPanierPrix.innerText = $[camera.price/100 + ' €'];
-    //                         containerPanier.appendChild(containerPanierPrix);
-    //
-    //
-    //
-    //
-    //         })
-    //
-    //     }
-    //
-    // }
-
-
-    // _getTemplate(type) {
-    //     switch (type) {
-    //         case "monpanier":
-    //
-    //             //Container principal
-    //             const containerPanier = document.createElement('div');
-    //             containerPanier.classList.add('row');
-    //
-    //             //Container Image
-    //             const containerPanierImage = document.createElement('div');
-    //             containerPanierImage.classList.add('col','border','border-dark','mh-100');
-    //             containerPanierImage.src = this.imageUrl;
-    //             containerPanier.appendChild(containerPanierImage);
-    //
-    //             //Container reference
-    //             const containerPanierRef = document.createElement('div');
-    //             containerPanierRef.classList.add('col','border','border-dark','mh-100');
-    //             containerPanierRef.textContent = this._id;
-    //             containerPanier.appendChild(containerPanierRef);
-    //
-    //             //Container prix
-    //             const containerPanierPrix = document.createElement('div');
-    //             containerPanierPrix.classList.add('col','border','border-dark','mh-100');
-    //             containerPanierPrix.innerText = this.price/100 + ' €';
-    //             containerPanier.appendChild(containerPanierPrix);
-    //
-    //             //Container quantité -> créer +boutton +/-
-    //             const containerPanierQuantite = document.createElement('div');
-    //             containerPanierQuantite.classList.add('col','border','border-dark','mh-100');
-    //             containerPanierQuantite.innerText = this.quandity;
-    //             containerPanier.appendChild(containerPanierQuantite);
-    //
-    //             //Container boutton supprimer  -> créer boutton supp
-    //             const containerPanierSupp = document.createElement('div');
-    //             containerPanierSupp.classList.add('col','border','border-dark','mh-100');
-    //             containerPanier.appendChild(containerPanierSupp);
-    //
-    //
-    //             //Container prix total
-    //
-    //
-    //             return containerPanier;
-    //
-    //             break;
-    //
-    //         default :
-    //             throw "Aucun template n'est défini";
-    //     }
-    //
-    // }
-        // /**
-        //  * @desc Container template
-        //  * @param {HTMLElement} container
-        //  * @return {HTMLElement} container
-        //  */
-        // setContainer(container)
-        // {
-        //     this.container = container;
-        //
-        // }
-
+    }
 
 }
