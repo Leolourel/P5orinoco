@@ -17,14 +17,14 @@ export default class Panier {
             this.content = {};
             this._saveContentToLocaleStorage();
         }
-        this.display();
+        this.displayBasket();
     }
 
 
      // sauvegarder le contenu dans le localStorage
     _saveContentToLocaleStorage() {
         localStorage.setItem('basket',JSON.stringify(this.content));
-        this.display();
+        this.displayBasket();
     }
 
 
@@ -58,26 +58,50 @@ export default class Panier {
     }
 
 
-     //Afficher le contenu du panier dans le DOM
-    display() {
+     /**
+      * @desc Afficher le contenu du panier dans le DOM
+      * @todo reussir à afficher l'img correctement dans le dom
+      */
 
+    displayBasket() {
+
+        // Pour chaque caméras présentes dans le localStorage on l'affiches dans le DOM Panier
         for (const [_id, camera] of Object.entries(this.content)) {
 
                 let tableBasket = document.getElementById('panier');
                 let ligneProduit = document.createElement('tr');
                 tableBasket.appendChild(ligneProduit);
-                //
+
+
+
+                //Création des colones du tableau Panier
                 let nomProduit = document.createElement('th');
                 let prixProduit = document.createElement('th');
                 let descriptionProduit = document.createElement('th');
+                let imgProduitContainer = document.createElement('th');
+                let imgProduit = document.createElement('img');
+                let quantityProduit = document.createElement('th');
 
-                nomProduit.innerText = JSON.stringify(this.content[name]);
-                // prixProduit.innerText = this.content[price];
-                descriptionProduit.innerText = this.content[camera.description];
+
+                nomProduit.innerText = camera.name;
+                prixProduit.innerText = camera.price/100 + " €";
+                descriptionProduit.innerText =  camera.description;
+                imgProduit.setAttribute("src",camera.imageUrl) ;
+                quantityProduit.innerText = camera.quantity;
 
                 ligneProduit.appendChild(nomProduit);
+                ligneProduit.appendChild(prixProduit);
                 ligneProduit.appendChild(descriptionProduit);
-                ligneProduit.appendChild(descriptionProduit);
+                ligneProduit.appendChild(imgProduitContainer);
+                imgProduitContainer.appendChild(imgProduit)
+                ligneProduit.appendChild(quantityProduit);
+
+                imgProduit.classList.add('imagePanier');
+
+                // créer bouton gerer la quantité
+                // créer bouton supprimer du panier
+                // créer bouton prix total
+
 
             console.log(camera);
         }
