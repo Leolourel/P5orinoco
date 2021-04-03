@@ -5,3 +5,16 @@
 table tr th{
   border: black 1px solid;
 }
+
+.borderTd{
+  border: black 1px solid;
+  text-align: center;
+}
+
+//{
+//  border: black 1px solid;
+//}
+
+.lastTh:nth-last-child{
+  background-color: white;
+}

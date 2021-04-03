@@ -10,17 +10,7 @@
       <change beforePath="$PROJECT_DIR$/Css/orinoco.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Css/orinoco.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Html/panier.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/panier.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Panier.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Panier.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sass/components/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/components/_buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sass/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sass/layout/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sass/orinoco.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/orinoco.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sass/pages/_confirmation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/pages/_confirmation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sass/pages/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/pages/_index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sass/pages/_panier.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/pages/_panier.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sass/pages/_produits.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/pages/_produits.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sass/utils/_animations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/utils/_animations.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sass/utils/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/utils/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sass/utils/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/utils/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/pages/_panier.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/pages/_panier.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +32,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/Orinoco" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -59,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617279806675</updated>
-      <workItem from="1617279807889" duration="17677000" />
+      <workItem from="1617279807889" duration="23468000" />
     </task>
     <task id="LOCAL-00002" summary="Fin de la methode remove + ajout quantity + display panier (ne fonctionne pas et fait buger le display index)">
       <created>1617308807147</created>
@@ -68,7 +59,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617308807147</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="display panier mis en page">
+      <created>1617382172042</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617382172042</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,6 +87,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Nouveau git car probleme vcs root" />
     <MESSAGE value="Fin de la methode remove + ajout quantity + display panier (ne fonctionne pas et fait buger le display index)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fin de la methode remove + ajout quantity + display panier (ne fonctionne pas et fait buger le display index)" />
+    <MESSAGE value="display panier mis en page" />
+    <option name="LAST_COMMIT_MESSAGE" value="display panier mis en page" />
   </component>
 </project>
