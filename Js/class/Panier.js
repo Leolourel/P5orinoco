@@ -3,7 +3,6 @@
  *@class
  */
 export default class Panier {
-// methode remove,  methode gerer les quantités, méthode prix total
 
     constructor() {
         // on vérifi si le localStorage contient un panier
@@ -11,21 +10,20 @@ export default class Panier {
          // Si on a un panier on recupere le contenu
         if (basketFromStorage){
             this.content = basketFromStorage;
-            console.log(this.content);
         }
         // Sinon on en creer un
         else {
             this.content = {};
             this._saveContentToLocaleStorage();
         }
-        this.displayBasket();
     }
 
 
      // sauvegarder le contenu dans le localStorage
     _saveContentToLocaleStorage() {
+        console.log(this.content);
         localStorage.setItem('basket',JSON.stringify(this.content));
-        this.displayBasket();
+        this.display();
     }
 
 
@@ -35,7 +33,6 @@ export default class Panier {
      */
     add(camera) {
         // Si la camera n'existe pas dans le panier l'ajouter
-        console.log(camera)
         if(this.content[camera._id] === undefined){
             this.content[camera._id] = camera;
         }
@@ -44,13 +41,13 @@ export default class Panier {
             const cameraFromBasket = this.content[camera._id];
             cameraFromBasket.quantity++;
             this.content[camera._id] = cameraFromBasket;
-            console.log('augmenter la quantité todo')
         }
         this._saveContentToLocaleStorage();
     }
 
     /**
      * @desc fonction supprimer la caméra du panier
+     * @param {Camera} camera
      * @todo ajouter le bouton a la page panier une fois créer
      */
     remove(camera) {
@@ -58,19 +55,94 @@ export default class Panier {
         this._saveContentToLocaleStorage();
     }
 
+     /**
+      *  @desc Augmenter la quantitée de la caméra dans le panier
+      * @param camera
+      */
+    addQuantity(camera){
+        const cameraFromBasket = this.content[camera._id];
+        cameraFromBasket.quantity++;
+        this.content[camera._id] = cameraFromBasket;
+        this._saveContentToLocaleStorage();
+    }
+
+    removeQuantity(camera){
+        const cameraFromBasket = this.content[camera._id];
+        cameraFromBasket.quantity--;
+        this.content[camera._id] = cameraFromBasket;
+        this._saveContentToLocaleStorage();
+    }
 
      /**
       * @desc Afficher le contenu du panier dans le DOM
-      * @todo reussir à afficher l'img correctement dans le dom
+      *
       */
 
-    displayBasket() {
+    display() {
 
+        let tableBasket = document.getElementById('panier');
+
+        if(!tableBasket){
+            return;
+        }
+
+        tableBasket.innerHTML = "";
+
+        //En tete du tableau panier
+        let tableHead = document.createElement('tr');
+        let imageHead = document.createElement('th');
+        let nomHead = document.createElement('th');
+        let descHead = document.createElement('th');
+        let quantityHead = document.createElement('th');
+        let prixHead = document.createElement('th');
+        let suppHead = document.createElement('th');
+
+
+
+        imageHead.innerText = 'IMAGE';
+        nomHead.innerText = 'NOM';
+        descHead.innerText = 'DESCRIPTION';
+        quantityHead.innerText = 'QUANTITE';
+        prixHead.innerText = 'PRIX';
+        suppHead.innerText = 'SUPPRIMER';
+
+        tableBasket.appendChild(tableHead);
+        tableHead.appendChild(imageHead);
+        tableHead.appendChild(nomHead);
+        tableHead.appendChild(descHead);
+        tableHead.appendChild(quantityHead);
+        tableHead.appendChild(prixHead);
+        tableHead.appendChild(suppHead);
+
+        //Calcul du prix total
+        let totalPrice = 0;
+        for (const [_id, camera] of Object.entries(this.content)) {
+
+            totalPrice += camera.price/100 * camera.quantity;
+        }
+
+        //Pied de page du tableau
+        let tableFoot = document.createElement('tfoot');
+        let totalPriceFoot = document.createElement('th');
+        let totalPriceContainerFoot = document.createElement('th');
+
+        totalPriceFoot.innerText = 'PRIX TOTAL';
+        totalPriceContainerFoot.innerText = totalPrice;
+
+        totalPriceFoot.setAttribute("colspan", 4);
+        totalPriceFoot.classList.add('borderTd');
+        totalPriceContainerFoot.classList.add('borderTd');
+
+        tableBasket.appendChild(tableFoot);
+        tableFoot.appendChild(totalPriceFoot);
+        tableFoot.appendChild(totalPriceContainerFoot);
+
+
+        console.log(totalPrice)
         // Pour chaque caméras présentes dans le localStorage on l'affiches dans le DOM Panier
         for (const [_id, camera] of Object.entries(this.content)) {
 
                 //Création de la structure HTML du tableau panier
-                let tableBasket = document.getElementById('panier');
                 let ligneProduit = document.createElement('tr');
                 tableBasket.appendChild(ligneProduit);
 
@@ -83,10 +155,11 @@ export default class Panier {
                 let imgProduitContainer = document.createElement('td');
                 let imgProduit = document.createElement('img');
                 let quantityProduit = document.createElement('td');
+                let removeProduit = document.createElement('td');
 
                 //Ajout des valeurs de la caméra dans les colones du panier
                 nomProduit.innerText = camera.name;
-                prixProduit.innerText = camera.price/100 + " €";
+                prixProduit.innerText = camera.price/100 * camera.quantity + " €";
                 descriptionProduit.innerText =  camera.description;
                 imgProduit.setAttribute("src",camera.imageUrl) ;
                 quantityProduit.innerText = camera.quantity;
@@ -98,6 +171,7 @@ export default class Panier {
                 ligneProduit.appendChild(descriptionProduit);
                 ligneProduit.appendChild(quantityProduit);
                 ligneProduit.appendChild(prixProduit);
+                ligneProduit.appendChild(removeProduit)
 
                 //Ajout des classes css
                 imgProduit.classList.add('imagePanier');
@@ -105,34 +179,31 @@ export default class Panier {
                 prixProduit.classList.add('borderTd');
                 descriptionProduit.classList.add('borderTd');
                 imgProduitContainer.classList.add('borderTd');
-                quantityProduit .classList.add('borderTd');
+                quantityProduit.classList.add('borderTd');
+                removeProduit.classList.add('borderTd');
 
-                //Création du bouton gerer la quantité
-                // const removeBasket = document.createElement("button");
-                // removeBasket.innerText = 'Supprimer du panier';
-                // removeBasket.addEventListener('click',this._removeBasket.bind(this) );
-                // divTitleDescProduit.appendChild(removeBasket);
+                // Bouton augmenter la quantité
+                const buttonQuantityMoreBasket = document.createElement("button");
+                buttonQuantityMoreBasket.innerText = '+';
+                buttonQuantityMoreBasket.addEventListener('click', this.addQuantity.bind(this, camera));
+                quantityProduit.appendChild(buttonQuantityMoreBasket);
+
+                 //Bouton diminuer la quantité
+                 const buttonQuantityLessBasket = document.createElement("button");
+                 buttonQuantityLessBasket.innerText = '-';
+                 buttonQuantityLessBasket.addEventListener('click', this.removeQuantity.bind(this, camera));
+                 quantityProduit.appendChild(buttonQuantityLessBasket);
+
+                //Bouton supprimer la caméra du panier
+                 const buttonRemoveBasket = document.createElement("button");
+                 buttonRemoveBasket.innerText = "X";
+                 buttonRemoveBasket.addEventListener('click', this.remove.bind(this, camera));
+                 removeProduit.appendChild(buttonRemoveBasket);
 
 
-                let totalPrice = camera.price * camera.quantity / 100;
-                console.log(totalPrice);
-                //
-                // let totalCamera = this.content.length;
-                // console.log(totalCamera);
-
-                // créer bouton gerer la quantité
-                // créer bouton supprimer du panier
-                // créer bouton prix total
-
-
-            // console.log(camera);
         }
 
     }
 
 
-    // totalPrice(camera) {
-    //     let prixPanier = camera.quantity * camera.price / 100;
-    //     console.log(prixPanier);
-    // }
 }

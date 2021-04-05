@@ -1,6 +1,5 @@
 import Panier from './Panier.js';
 
-const panier = new Panier();
 
 export default class Camera {
 
@@ -140,17 +139,15 @@ export default class Camera {
                     select.appendChild(option);
                 };
 
+
+                //Interaction avec le panier
+                const panier = new Panier();
+
                 //Création du boutton ajout au panier
                 const addPanier = document.createElement("button");
                 addPanier.innerText = 'Ajouter au panier';
-                addPanier.addEventListener('click', this._addBasket.bind(this) );
+                addPanier.addEventListener('click', panier.add.bind(panier, this));
                 divTitleDescProduit.appendChild(addPanier);
-
-                //Création du bouton supprimer du panier (ajouter a la page panier) test
-                const removeBasket = document.createElement("button");
-                removeBasket.innerText = 'Supprimer du panier';
-                removeBasket.addEventListener('click',this._removeBasket.bind(this) );
-                divTitleDescProduit.appendChild(removeBasket);
 
                 return divContainer;
 
@@ -171,19 +168,4 @@ export default class Camera {
 
     }
 
-    // const panier = new Panier();
-
-    /**
-     @desc bouton d'ajout au panier produit
-     @function
-     @class Panier
-     */
-    _addBasket(){
-        // const panier = new Panier();
-        panier.add(this);
-    }
-
-    _removeBasket(){
-        panier.remove(this);
-    }
 }

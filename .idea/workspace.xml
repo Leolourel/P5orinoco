@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0f400cc3-6492-4f28-aa7a-6123b4ad4f5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Css/orinoco.css" beforeDir="false" afterPath="$PROJECT_DIR$/Css/orinoco.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Css/orinoco.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Css/orinoco.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/confirmation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Html/panier.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/panier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html/produits.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/produits.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/class/Cameras.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Cameras.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/class/Formulaire.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Formulaire.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Panier.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Panier.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/pages/_panier.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/pages/_panier.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/panier.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/panier.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617279806675</updated>
-      <workItem from="1617279807889" duration="23468000" />
+      <workItem from="1617279807889" duration="38406000" />
     </task>
     <task id="LOCAL-00002" summary="Fin de la methode remove + ajout quantity + display panier (ne fonctionne pas et fait buger le display index)">
       <created>1617308807147</created>
@@ -66,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617382172042</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit avant création bouton gestion de la quantité panier">
+      <created>1617453683260</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617453683260</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,6 +97,7 @@
     <MESSAGE value="Nouveau git car probleme vcs root" />
     <MESSAGE value="Fin de la methode remove + ajout quantity + display panier (ne fonctionne pas et fait buger le display index)" />
     <MESSAGE value="display panier mis en page" />
-    <option name="LAST_COMMIT_MESSAGE" value="display panier mis en page" />
+    <MESSAGE value="Commit avant création bouton gestion de la quantité panier" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit avant création bouton gestion de la quantité panier" />
   </component>
 </project>
