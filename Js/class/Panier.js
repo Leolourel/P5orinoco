@@ -96,27 +96,27 @@ export default class Panier {
         //En tete du tableau panier
         let tableHead = document.createElement('tr');
         let imageHead = document.createElement('th');
-        let nomHead = document.createElement('th');
+        let nameHead = document.createElement('th');
         let descHead = document.createElement('th');
         let quantityHead = document.createElement('th');
-        let prixHead = document.createElement('th');
+        let priceHead = document.createElement('th');
         let suppHead = document.createElement('th');
 
 
 
         imageHead.innerText = 'IMAGE';
-        nomHead.innerText = 'NOM';
+        nameHead.innerText = 'NOM';
         descHead.innerText = 'DESCRIPTION';
         quantityHead.innerText = 'QUANTITE';
-        prixHead.innerText = 'PRIX';
+        priceHead.innerText = 'PRIX';
         suppHead.innerText = 'SUPPRIMER';
 
         tableBasket.appendChild(tableHead);
         tableHead.appendChild(imageHead);
-        tableHead.appendChild(nomHead);
+        tableHead.appendChild(nameHead);
         tableHead.appendChild(descHead);
         tableHead.appendChild(quantityHead);
-        tableHead.appendChild(prixHead);
+        tableHead.appendChild(priceHead);
         tableHead.appendChild(suppHead);
 
         //Calcul du prix total
@@ -147,8 +147,8 @@ export default class Panier {
         for (const [_id, camera] of Object.entries(this.content)) {
 
                 //Création de la structure HTML du tableau panier
-                let ligneProduit = document.createElement('tr');
-                tableBasket.appendChild(ligneProduit);
+                let lineProduct = document.createElement('tr');
+                tableBasket.appendChild(lineProduct);
 
 
 
@@ -169,13 +169,13 @@ export default class Panier {
                 quantityProduit.innerText = camera.quantity;
 
                 //Mise en page des colones du tableau
-                ligneProduit.appendChild(imgProduitContainer);
+                lineProduct.appendChild(imgProduitContainer);
                 imgProduitContainer.appendChild(imgProduit)
-                ligneProduit.appendChild(nomProduit);
-                ligneProduit.appendChild(descriptionProduit);
-                ligneProduit.appendChild(quantityProduit);
-                ligneProduit.appendChild(prixProduit);
-                ligneProduit.appendChild(removeProduit)
+                lineProduct.appendChild(nomProduit);
+                lineProduct.appendChild(descriptionProduit);
+                lineProduct.appendChild(quantityProduit);
+                lineProduct.appendChild(prixProduit);
+                lineProduct.appendChild(removeProduit)
 
                 //Ajout des classes css
                 imgProduit.classList.add('imagePanier');

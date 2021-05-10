@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0f400cc3-6492-4f28-aa7a-6123b4ad4f5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/confirmation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Html/panier.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/panier.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Formulaire.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Formulaire.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Panier.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Panier.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/formulaire.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/formulaire.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/panier.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/panier.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +57,7 @@
       <updated>1617279806675</updated>
       <workItem from="1617279807889" duration="46187000" />
       <workItem from="1620051930417" duration="5641000" />
-      <workItem from="1620061302514" duration="3262000" />
+      <workItem from="1620061302514" duration="10574000" />
     </task>
     <task id="LOCAL-00002" summary="Fin de la methode remove + ajout quantity + display panier (ne fonctionne pas et fait buger le display index)">
       <created>1617308807147</created>
@@ -90,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617637139272</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Commit avant test regex">
+      <created>1620636918132</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1620636918132</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +118,7 @@
     <MESSAGE value="display panier mis en page" />
     <MESSAGE value="Commit avant création bouton gestion de la quantité panier" />
     <MESSAGE value="FIN DU PANIER, Tout est fonctionnel !" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIN DU PANIER, Tout est fonctionnel !" />
+    <MESSAGE value="Commit avant test regex" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit avant test regex" />
   </component>
 </project>
