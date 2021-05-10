@@ -36,19 +36,19 @@ export default class Panier {
         if(this.content[camera._id] === undefined){
             this.content[camera._id] = camera;
         }
-        // Si elle existe deja augmenter la quantité (todo)
+        // Si elle existe deja augmenter la quantité
         else{
             const cameraFromBasket = this.content[camera._id];
             cameraFromBasket.quantity++;
             this.content[camera._id] = cameraFromBasket;
         }
+        document.location.reload();
         this._saveContentToLocaleStorage();
     }
 
     /**
      * @desc fonction supprimer la caméra du panier
      * @param {Camera} camera
-     * @todo ajouter le bouton a la page panier une fois créer
      */
     remove(camera) {
         delete this.content[camera._id];
@@ -69,8 +69,13 @@ export default class Panier {
     removeQuantity(camera){
         const cameraFromBasket = this.content[camera._id];
         cameraFromBasket.quantity--;
-        this.content[camera._id] = cameraFromBasket;
-        this._saveContentToLocaleStorage();
+        if(cameraFromBasket.quantity < 1 ){
+            this.remove(camera)
+        }
+        else{
+            this.content[camera._id] = cameraFromBasket;
+            this._saveContentToLocaleStorage();
+        }
     }
 
      /**
@@ -138,7 +143,6 @@ export default class Panier {
         tableFoot.appendChild(totalPriceContainerFoot);
 
 
-        console.log(totalPrice)
         // Pour chaque caméras présentes dans le localStorage on l'affiches dans le DOM Panier
         for (const [_id, camera] of Object.entries(this.content)) {
 
