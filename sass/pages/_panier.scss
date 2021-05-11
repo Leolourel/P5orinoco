@@ -14,3 +14,13 @@ table tr th{
 .lastTh:nth-last-child{
   background-color: white;
 }
+
+// Formulaire
+
+.good{
+  border: 2px solid lightgreen !important;
+}
+
+.error{
+  border: 2px solid red !important;
+}

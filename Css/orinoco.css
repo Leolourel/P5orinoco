@@ -77,6 +77,14 @@ table tr th {
   background-color: white;
 }
 
+.good {
+  border: 2px solid lightgreen !important;
+}
+
+.error {
+  border: 2px solid red !important;
+}
+
 #divImageProduit {
   border: 2px solid black;
   display: flex;

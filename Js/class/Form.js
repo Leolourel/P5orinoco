@@ -63,6 +63,19 @@ export default class Form {
         return rex;
     }
 
+    // _validateFieldIsOk() {
+    //     if (
+    //         emailOk &&
+    //         lastNameOk &&
+    //         firstNameOk &&
+    //         addressOk &&
+    //         cityOk === true
+    //     ) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     };
+    // }
 
     _onValidForm(e){
         e.preventDefault();
@@ -80,8 +93,6 @@ export default class Form {
         let city = document.getElementById('city');
 
 
-
-
         // Définition des différentes Regex utilisées formulaire de validation
 
         let firstNameRegex = /^[a-zA-Z-\-àâäÂÄéèêëÊËîïÎÏôöÔÖùûüÛÜ\s"]+$/;
@@ -92,7 +103,7 @@ export default class Form {
 
         let cityRegex = /^[a-zA-Z-\-àâäÂÄéèêëÊËîïÎÏôöÔÖùûüÛÜ\s"]+$/;
 
-        let emailRegex = /^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2-10}$/;
+        let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
         // let zipCodeRegex = /^[0-9]{5}+$/;
 
@@ -104,6 +115,27 @@ export default class Form {
         const cityOk = this._validateField(city, cityRegex);
 
 
+        // Fonction validation de tous les inputs
+        function testFormOk() {
+            if (
+                        emailOk &&
+                        lastNameOk &&
+                        firstNameOk &&
+                        addressOk &&
+                        cityOk === true
+                    ) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+        };
+
+        console.log(testFormOk());
+
+
+
+        // let testFormOk = this._validateFieldIsOk();
+        // console.log(testFormOk);
 
         // //Test FirstName
         // if (firstNameRegex.test(firstName) == true || firstName == "") {

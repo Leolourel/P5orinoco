@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f400cc3-6492-4f28-aa7a-6123b4ad4f5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Js/basket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html/panier.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/panier.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html/produits.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/produits.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/class/Cameras.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Cameras.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/class/Formulaire.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/class/Panier.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Basket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/formulaire.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/panier.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/produit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Css/orinoco.css" beforeDir="false" afterPath="$PROJECT_DIR$/Css/orinoco.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Css/orinoco.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Css/orinoco.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/class/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/pages/_panier.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/pages/_panier.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +58,7 @@
       <updated>1617279806675</updated>
       <workItem from="1617279807889" duration="46187000" />
       <workItem from="1620051930417" duration="5641000" />
-      <workItem from="1620061302514" duration="17499000" />
+      <workItem from="1620061302514" duration="20724000" />
     </task>
     <task id="LOCAL-00002" summary="Fin de la methode remove + ajout quantity + display panier (ne fonctionne pas et fait buger le display index)">
       <created>1617308807147</created>
@@ -107,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620659137859</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fonction _onValidForm Ok">
+      <created>1620724129624</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620724129624</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +135,7 @@
     <MESSAGE value="FIN DU PANIER, Tout est fonctionnel !" />
     <MESSAGE value="Commit avant test regex" />
     <MESSAGE value="modification nom variable anglais francais" />
-    <option name="LAST_COMMIT_MESSAGE" value="modification nom variable anglais francais" />
+    <MESSAGE value="Fonction _onValidForm Ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fonction _onValidForm Ok" />
   </component>
 </project>
