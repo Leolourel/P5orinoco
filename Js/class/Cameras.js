@@ -1,4 +1,4 @@
-import Panier from './Panier.js';
+import Basket from './Basket.js';
 
 
 export default class Camera {
@@ -53,11 +53,11 @@ export default class Camera {
                 const link = document.createElement('a');
                 const divImg = document.createElement('div');
                 const div = document.createElement('div')
-                const divPrix = document.createElement('div');
+                const divPrice = document.createElement('div');
                 const img = document.createElement('img');
                 const title = document.createElement('h2');
                 const description = document.createElement('p');
-                const prix = document.createElement('p');
+                const price = document.createElement('p');
                 li.id = this._id;
                 img.src = this.imageUrl;
 
@@ -66,70 +66,70 @@ export default class Camera {
                 link.setAttribute('href',`produits.html?id=${this._id}`);
                 link.setAttribute('id', 'containerLink');
                 div.setAttribute('id','divProduit');
-                divPrix.setAttribute('id','divPrix');
+                divPrice.setAttribute('id','divPrix');
                 title.setAttribute('id','titreProduit');
                 description.setAttribute('id','paraProduit');
-                prix.setAttribute('id', 'prix');
+                price.setAttribute('id', 'prix');
 
                 //Ajout des class
                 link.classList.add('row','text-decoration-none','containerproduit');
                 divImg.classList.add('col-4');
                 div.classList.add('containerdesc','col-6');
-                divPrix.classList.add('col-2');
+                divPrice.classList.add('col-2');
                 img.classList.add('imgSize');
 
                 //Personnalisation du text
                 title.innerText = this.name;
                 description.innerText = this.description;
-                prix.innerText = this.price/100 + ' €';
+                price.innerText = this.price/100 + ' €';
 
                 //Création des noeud
                 li.appendChild(link);
                 link.appendChild(divImg);
                 link.appendChild(div);
-                link.appendChild(divPrix);
+                link.appendChild(divPrice);
                 divImg.appendChild(img);
                 div.appendChild(title);
                 div.appendChild(description);
-                divPrix.appendChild(prix);
+                divPrice.appendChild(price);
 
                 return li;
 
                 break;
 
-            case "produit" : //template produit
+            case "product" : //template produit
 
                 //Récupération des éléments
                 const divContainer = document.getElementById('divContainer');
-                const divImageProduit = document.getElementById('divImageProduit');
-                const divTitleDescProduit = document.getElementById('divTitleDescProduit');
+                const divImageProduct = document.getElementById('divImageProduit');
+                const divTitleDescProduct = document.getElementById('divTitleDescProduit');
                 const select = document.getElementById('lensesOption');
 
                 //Création des éléments
-                const imgproduit = document.createElement('img');
-                const titleproduit = document.createElement('h2');
-                const descriptionproduit = document.createElement('p');
-                const prixproduit = document.createElement('p');
-                imgproduit.src = this.imageUrl;
+                const imgProduct = document.createElement('img');
+                const titleProduct = document.createElement('h2');
+                const descriptionProduct = document.createElement('p');
+                const priceProduct = document.createElement('p');
+                imgProduct.src = this.imageUrl;
 
                 //Ajout des class
                 divContainer.classList.add('row');
-                divImageProduit.classList.add('col');+
-                divTitleDescProduit.classList.add('col');
-                imgproduit.classList.add('img-fluid');
+                divImageProduct.classList.add('col');+
+                divTitleDescProduct.classList.add('col');
+                imgProduct.classList.add('img-fluid');
 
                 //Personnalisation du text
-                titleproduit.textContent = this.name;
-                descriptionproduit.innerText = this.description;
-                prixproduit.innerText = this.price/100 + ' €';
+                titleProduct.textContent = this.name;
+                descriptionProduct.innerText = this.description;
+                priceProduct.innerText = this.price/100 + ' €';
 
                 //Création des noeud
-                divContainer.appendChild(divImageProduit);
-                divContainer.appendChild(divTitleDescProduit);
-                divImageProduit.appendChild(imgproduit);
-                divTitleDescProduit.appendChild(titleproduit);
-                divTitleDescProduit.appendChild(descriptionproduit);
-                divTitleDescProduit.appendChild(prixproduit);
+                divContainer.appendChild(divImageProduct);
+                divContainer.appendChild(divTitleDescProduct);
+                divImageProduct.appendChild(imgProduct);
+                divTitleDescProduct.appendChild(titleProduct);
+                divTitleDescProduct.appendChild(descriptionProduct);
+                divTitleDescProduct.appendChild(priceProduct);
 
                 // création de l'option lentille
                 for( let i = 0; i < this.lenses.length; i++) {
@@ -141,13 +141,13 @@ export default class Camera {
 
 
                 //Interaction avec le panier
-                const panier = new Panier();
+                const basket = new Basket();
 
                 //Création du boutton ajout au panier
-                const addPanier = document.createElement("button");
-                addPanier.innerText = 'Ajouter au panier';
-                addPanier.addEventListener('click', panier.add.bind(panier, this));
-                divTitleDescProduit.appendChild(addPanier);
+                const addBasket = document.createElement("button");
+                addBasket.innerText = 'Ajouter au panier';
+                addBasket.addEventListener('click', basket.add.bind(basket, this));
+                divTitleDescProduct.appendChild(addBasket);
 
                 return divContainer;
 

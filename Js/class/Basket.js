@@ -2,7 +2,7 @@
  *@desc class pour parametrer la panier
  *@class
  */
-export default class Panier {
+export default class Basket {
 
     constructor() {
         // on vérifi si le localStorage contient un panier
@@ -153,56 +153,56 @@ export default class Panier {
 
 
                 //Création des colones du tableau Panier
-                let nomProduit = document.createElement('td');
-                let prixProduit = document.createElement('td');
-                let descriptionProduit = document.createElement('td');
-                let imgProduitContainer = document.createElement('td');
-                let imgProduit = document.createElement('img');
-                let quantityProduit = document.createElement('td');
-                let removeProduit = document.createElement('td');
+                let nameProduct = document.createElement('td');
+                let priceProduct = document.createElement('td');
+                let desctProduct = document.createElement('td');
+                let imgProductContainer = document.createElement('td');
+                let imgProduct = document.createElement('img');
+                let quantityProduct = document.createElement('td');
+                let removeProduct = document.createElement('td');
 
                 //Ajout des valeurs de la caméra dans les colones du panier
-                nomProduit.innerText = camera.name;
-                prixProduit.innerText = camera.price/100 * camera.quantity + " €";
-                descriptionProduit.innerText =  camera.description;
-                imgProduit.setAttribute("src",camera.imageUrl) ;
-                quantityProduit.innerText = camera.quantity;
+                nameProduct.innerText = camera.name;
+                priceProduct.innerText = camera.price/100 * camera.quantity + " €";
+                desctProduct.innerText =  camera.description;
+                imgProduct.setAttribute("src",camera.imageUrl) ;
+                quantityProduct.innerText = camera.quantity;
 
                 //Mise en page des colones du tableau
-                lineProduct.appendChild(imgProduitContainer);
-                imgProduitContainer.appendChild(imgProduit)
-                lineProduct.appendChild(nomProduit);
-                lineProduct.appendChild(descriptionProduit);
-                lineProduct.appendChild(quantityProduit);
-                lineProduct.appendChild(prixProduit);
-                lineProduct.appendChild(removeProduit)
+                lineProduct.appendChild(imgProductContainer);
+                imgProductContainer.appendChild(imgProduct);
+                lineProduct.appendChild(nameProduct);
+                lineProduct.appendChild(desctProduct);
+                lineProduct.appendChild(quantityProduct);
+                lineProduct.appendChild(priceProduct);
+                lineProduct.appendChild(removeProduct)
 
                 //Ajout des classes css
-                imgProduit.classList.add('imagePanier');
-                nomProduit .classList.add('borderTd');
-                prixProduit.classList.add('borderTd');
-                descriptionProduit.classList.add('borderTd');
-                imgProduitContainer.classList.add('borderTd');
-                quantityProduit.classList.add('borderTd');
-                removeProduit.classList.add('borderTd');
+                imgProduct.classList.add('imagePanier');
+                nameProduct .classList.add('borderTd');
+                priceProduct.classList.add('borderTd');
+                desctProduct.classList.add('borderTd');
+                imgProductContainer.classList.add('borderTd');
+                quantityProduct.classList.add('borderTd');
+                removeProduct.classList.add('borderTd');
 
                 // Bouton augmenter la quantité
                 const buttonQuantityMoreBasket = document.createElement("button");
                 buttonQuantityMoreBasket.innerText = '+';
                 buttonQuantityMoreBasket.addEventListener('click', this.addQuantity.bind(this, camera));
-                quantityProduit.appendChild(buttonQuantityMoreBasket);
+                quantityProduct.appendChild(buttonQuantityMoreBasket);
 
                  //Bouton diminuer la quantité
                  const buttonQuantityLessBasket = document.createElement("button");
                  buttonQuantityLessBasket.innerText = '-';
                  buttonQuantityLessBasket.addEventListener('click', this.removeQuantity.bind(this, camera));
-                 quantityProduit.appendChild(buttonQuantityLessBasket);
+                 quantityProduct.appendChild(buttonQuantityLessBasket);
 
                 //Bouton supprimer la caméra du panier
                  const buttonRemoveBasket = document.createElement("button");
                  buttonRemoveBasket.innerText = "X";
                  buttonRemoveBasket.addEventListener('click', this.remove.bind(this, camera));
-                 removeProduit.appendChild(buttonRemoveBasket);
+                 removeProduct.appendChild(buttonRemoveBasket);
 
 
         }
