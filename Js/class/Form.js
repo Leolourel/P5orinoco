@@ -2,13 +2,16 @@ import Basket from "./Basket.js";
 
 export default class Form {
 
-
+    /**
+     * @desc
+     * @constructor
+     */
     constructor() {
         const basket = new Basket()
-        this.orderContent = basket.content;
+        this.orderContent = Object.keys(basket.content);
 
 
-        console.log(Object.keys(this.orderContent));
+        console.log(this.orderContent);
 
 
 
@@ -20,6 +23,9 @@ export default class Form {
     }
 
 
+    /**
+     * @desc
+     */
     display() {
 
         // let confirmPrice = document.getElementById('totalPrice');
@@ -35,7 +41,13 @@ export default class Form {
     //display switch case confiramtion et formulaire, boucle if pour afiicher ou non si pas present sur la bonne page 
 
 
-
+    /**
+     * @desc
+     * @param inputField
+     * @param pattern
+     * @return {boolean}
+     * @private
+     */
     _validateField(inputField, pattern) {
 
         if(!inputField){
@@ -68,7 +80,11 @@ export default class Form {
         return rex;
     }
 
-
+    /**
+     * @desc
+     * @param e
+     * @private
+     */
     _onValidForm(e){
         // e.preventDefault();
         console.log('test');
@@ -125,42 +141,49 @@ export default class Form {
         function createContactOrder() {
 
             if (testFormOk() === true){
-                   let contact = {
-                       firstName: firstName.value,
-                       lastName: lastName.value,
-                       mail : mail.value,
-                       address : address.value,
-                       city : city.value,
-                   }
+                    let contact = {
+                        firstName: firstName.value,
+                        lastName: lastName.value,
+                        mail : mail.value,
+                        address : address.value,
+                        city : city.value,
+                    };
+
+                    console.log(contact);
+                    // let productId = this.orderContent;
+                    //
+                    // console.log(productId);
 
 
-                let formulaireClient = JSON.stringify({
-                    contact,
-                    // Object.keys(this.orderContent) tableau _id ??
-                });
 
-                fetch('http://localhost:3000/api/cameras/order', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': "application/json"
-                    },
-                    mode: "cors",
-                    body: formulaireClient
-                })
-                    .then(function (response) {
-                        return response.json()
+                    // let formClient = {
+                    //     contact,
+                    //     productId
+                    //     };
+
+
+                    // console.log(formulaireClient);
+
+                    fetch('http://localhost:3000/api/cameras/order', {
+                        method: 'POST',
+                        headers: {
+                            'content-type': "application/json"
+                        },
+                        body: JSON.stringify(contact),   // formClient
                     })
-                    .then(function (r) {
-                        sessionStorage.setItem("contact", JSON.stringify(r.contact));
-                        window.location.assign("confirmation.html?order_id=" + r.order_id);
-                    })
-                    //SI PROBLEME API
-                    .catch(function (err) {
-                        console.log("fetch Error");
-                    });
-                   console.log(contact);
-                } else {
-                    alert('Une erreur est survenue votre panier est peut étre vide ou le formulaire n\'a pas été correctement rempli!')
+                        .then(response => response.json())
+                        .then(function (r) {
+                            sessionStorage.setItem("contact", JSON.stringify(contact));
+                            sessionStorage.setItem('orderId', r.orderId);
+                            window.location.href = "confirmation.html";
+                        })
+                        //SI PROBLEME API
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+
+                    } else {
+                        alert('Une erreur est survenue votre panier est peut étre vide ou le formulaire n\'a pas été correctement rempli!')
             };
         }
 

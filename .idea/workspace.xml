@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0f400cc3-6492-4f28-aa7a-6123b4ad4f5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/class/Basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Basket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +56,7 @@
       <updated>1617279806675</updated>
       <workItem from="1617279807889" duration="46187000" />
       <workItem from="1620051930417" duration="5641000" />
-      <workItem from="1620061302514" duration="30511000" />
+      <workItem from="1620061302514" duration="39367000" />
     </task>
     <task id="LOCAL-00002" summary="Fin de la methode remove + ajout quantity + display panier (ne fonctionne pas et fait buger le display index)">
       <created>1617308807147</created>
@@ -114,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620728825505</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="commit avant Création d'une méthode pour fetch onvalidform">
+      <created>1621240920971</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1621240920971</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +149,7 @@
     <MESSAGE value="modification nom variable anglais francais" />
     <MESSAGE value="Fonction _onValidForm Ok" />
     <MESSAGE value="validation des inputs fonction ok; return true si tous les inputs sont remplis correctement" />
-    <option name="LAST_COMMIT_MESSAGE" value="validation des inputs fonction ok; return true si tous les inputs sont remplis correctement" />
+    <MESSAGE value="commit avant Création d'une méthode pour fetch onvalidform" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit avant Création d'une méthode pour fetch onvalidform" />
   </component>
 </project>

@@ -3,7 +3,10 @@
  *@class
  */
 export default class Basket {
-
+     /**
+      * @desc
+      * @constructor
+      */
     constructor() {
         // on vérifi si le localStorage contient un panier
          const basketFromStorage = JSON.parse(localStorage.getItem('basket'));
@@ -19,7 +22,10 @@ export default class Basket {
     }
 
 
-     // sauvegarder le contenu dans le localStorage
+     /**
+      * @desc sauvegarde le panier dans le localStorage
+      * @private
+      */
     _saveContentToLocaleStorage() {
         console.log(this.content);
         localStorage.setItem('basket',JSON.stringify(this.content));
@@ -66,6 +72,10 @@ export default class Basket {
         this._saveContentToLocaleStorage();
     }
 
+     /**
+      * @desc Diminue et supprime la quantité de la caméra dans le panier
+      * @param camera
+      */
     removeQuantity(camera){
         const cameraFromBasket = this.content[camera._id];
         cameraFromBasket.quantity--;
@@ -82,7 +92,6 @@ export default class Basket {
       * @desc Afficher le contenu du panier dans le DOM
       *
       */
-
     display() {
 
         let tableBasket = document.getElementById('panier');
