@@ -5,7 +5,11 @@ export default class Form {
 
     constructor() {
         const basket = new Basket()
-        this.orderContent = basket.content
+        this.orderContent = basket.content;
+
+
+        console.log(Object.keys(this.orderContent));
+
 
 
         // Events
@@ -33,6 +37,7 @@ export default class Form {
 
 
     _validateField(inputField, pattern) {
+
         if(!inputField){
             throw inputField + ' n\'est pas défini'
         }
@@ -63,22 +68,9 @@ export default class Form {
         return rex;
     }
 
-    // _validateFieldIsOk() {
-    //     if (
-    //         emailOk &&
-    //         lastNameOk &&
-    //         firstNameOk &&
-    //         addressOk &&
-    //         cityOk === true
-    //     ) {
-    //         return true;
-    //     } else {
-    //         return false;
-    //     };
-    // }
 
     _onValidForm(e){
-        e.preventDefault();
+        // e.preventDefault();
         console.log('test');
         // Récupération des inputs du formulaire de validation
 
@@ -117,13 +109,8 @@ export default class Form {
 
         // Fonction validation de tous les inputs
         function testFormOk() {
-            if (
-                        emailOk &&
-                        lastNameOk &&
-                        firstNameOk &&
-                        addressOk &&
-                        cityOk === true
-                    ) {
+
+            if (emailOk && lastNameOk && firstNameOk && addressOk && cityOk === true) {
                         return true;
                     } else {
                         return false;
@@ -133,59 +120,52 @@ export default class Form {
         console.log(testFormOk());
 
 
+        // Création de l'objet contact si le formulaire est valide et le panier est rempli
+        // todo : && panier.lenght >= 1
+        function createContactOrder() {
 
-        // let testFormOk = this._validateFieldIsOk();
-        // console.log(testFormOk);
-
-        // //Test FirstName
-        // if (firstNameRegex.test(firstName) == true || firstName == "") {
-        //     console.log('firstname OK');
-        // }else{
-        //     checkMessage = 'error';
-        //     console.log('error');
-        // }
-        //
-        // //Test LastName
-        // if (lastNameRegex.test(lastName) == true || lastName == "") {
-        //     console.log('lastName OK');
-        // }else{
-        //     checkMessage = 'error';
-        //     console.log('error');
-        // }
-        //
-        // //Test address
-        // if (addressRegex.test(address) == true || address == "") {
-        //     console.log('address OK');
-        // }else{
-        //     checkMessage = 'error';
-        //     console.log('error');
-        // }
-        //
-        // //Test city
-        // if (cityRegex.test(city) == true || city == "") {
-        //     console.log('City OK');
-        // }else{
-        //     checkMessage = 'error';
-        //     console.log('error');
-        // }
-        //
-        // //Test Mail
-        // if (emailRegex.test(mail) == true || mail == "") {
-        //     console.log('email OK');
-        // }else{
-        //     checkMessage = 'error';
-        //     console.log('error');
-        // }
+            if (testFormOk() === true){
+                   let contact = {
+                       firstName: firstName.value,
+                       lastName: lastName.value,
+                       mail : mail.value,
+                       address : address.value,
+                       city : city.value,
+                   }
 
 
-        // if tous les tests sont valides  et panier.length>0 -> objet contact
-        // let contact = {
-        //     nom: lastName,
-        //     prenom: firstName,
-        //     adresse: address,
-        //     ville: city,
-        //     email: mail,
-        // };
+                let formulaireClient = JSON.stringify({
+                    contact,
+                    // Object.keys(this.orderContent) tableau _id ??
+                });
+
+                fetch('http://localhost:3000/api/cameras/order', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': "application/json"
+                    },
+                    mode: "cors",
+                    body: formulaireClient
+                })
+                    .then(function (response) {
+                        return response.json()
+                    })
+                    .then(function (r) {
+                        sessionStorage.setItem("contact", JSON.stringify(r.contact));
+                        window.location.assign("confirmation.html?order_id=" + r.order_id);
+                    })
+                    //SI PROBLEME API
+                    .catch(function (err) {
+                        console.log("fetch Error");
+                    });
+                   console.log(contact);
+                } else {
+                    alert('Une erreur est survenue votre panier est peut étre vide ou le formulaire n\'a pas été correctement rempli!')
+            };
+        }
+
+        createContactOrder();
+
 
     }
 
