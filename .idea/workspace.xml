@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0f400cc3-6492-4f28-aa7a-6123b4ad4f5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/class/Basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Basket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/product.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +37,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/Orinoco" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -56,7 +57,7 @@
       <updated>1617279806675</updated>
       <workItem from="1617279807889" duration="46187000" />
       <workItem from="1620051930417" duration="5641000" />
-      <workItem from="1620061302514" duration="39367000" />
+      <workItem from="1620061302514" duration="46782000" />
     </task>
     <task id="LOCAL-00002" summary="Fin de la methode remove + ajout quantity + display panier (ne fonctionne pas et fait buger le display index)">
       <created>1617308807147</created>
@@ -121,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621240920971</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="test async function fetch">
+      <created>1621263944055</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1621263944055</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +158,7 @@
     <MESSAGE value="Fonction _onValidForm Ok" />
     <MESSAGE value="validation des inputs fonction ok; return true si tous les inputs sont remplis correctement" />
     <MESSAGE value="commit avant Création d'une méthode pour fetch onvalidform" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit avant Création d'une méthode pour fetch onvalidform" />
+    <MESSAGE value="test async function fetch" />
+    <option name="LAST_COMMIT_MESSAGE" value="test async function fetch" />
   </component>
 </project>

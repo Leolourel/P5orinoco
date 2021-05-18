@@ -18,4 +18,6 @@ fetch("http://localhost:3000/api/cameras/" + productId)
         camera.display('product');
     });
 
+//.catch(error)
+
 
