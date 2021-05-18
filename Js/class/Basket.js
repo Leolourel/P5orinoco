@@ -89,7 +89,7 @@ export default class Basket {
     }
 
      /**
-      * @desc Afficher le contenu du panier dans le DOM
+      * @desc Méthode displau pour afficher le contenu du panier dans le DOM
       *
       */
     display() {
@@ -111,8 +111,7 @@ export default class Basket {
         let priceHead = document.createElement('th');
         let suppHead = document.createElement('th');
 
-
-
+        //Personnalisation du texte des en tete de la classe panier
         imageHead.innerText = 'IMAGE';
         nameHead.innerText = 'NOM';
         descHead.innerText = 'DESCRIPTION';
@@ -120,6 +119,7 @@ export default class Basket {
         priceHead.innerText = 'PRIX';
         suppHead.innerText = 'SUPPRIMER';
 
+        //Création des noeuds pour les en tete du tableau
         tableBasket.appendChild(tableHead);
         tableHead.appendChild(imageHead);
         tableHead.appendChild(nameHead);
@@ -128,29 +128,31 @@ export default class Basket {
         tableHead.appendChild(priceHead);
         tableHead.appendChild(suppHead);
 
-        //Calcul du prix total
-        let totalPrice = 0;
-        for (const [_id, camera] of Object.entries(this.content)) {
+         //Calcul du prix total
+         let totalPrice = 0;
+         for (const [_id, camera] of Object.entries(this.content)) {
 
-            totalPrice += camera.price/100 * camera.quantity;
-        }
+             totalPrice += camera.price/100 * camera.quantity;
+         }
 
         //Pied de page du tableau
         let tableFoot = document.createElement('tfoot');
         let totalPriceFoot = document.createElement('th');
         let totalPriceContainerFoot = document.createElement('th');
 
+        //Personnalisation du texte des pieds de page du tableau
         totalPriceFoot.innerText = 'PRIX TOTAL';
         totalPriceContainerFoot.innerText = totalPrice;
 
+        //Ajout des classes et des attribus des pieds de pages du tableau
         totalPriceFoot.setAttribute("colspan", 4);
         totalPriceFoot.classList.add('borderTd');
         totalPriceContainerFoot.classList.add('borderTd');
 
+        //Création des noeuds des pieds de pages du tableau
         tableBasket.appendChild(tableFoot);
         tableFoot.appendChild(totalPriceFoot);
         tableFoot.appendChild(totalPriceContainerFoot);
-
 
         // Pour chaque caméras présentes dans le localStorage on l'affiches dans le DOM Panier
         for (const [_id, camera] of Object.entries(this.content)) {
@@ -158,8 +160,6 @@ export default class Basket {
                 //Création de la structure HTML du tableau panier
                 let lineProduct = document.createElement('tr');
                 tableBasket.appendChild(lineProduct);
-
-
 
                 //Création des colones du tableau Panier
                 let nameProduct = document.createElement('td');
@@ -201,17 +201,17 @@ export default class Basket {
                 buttonQuantityMoreBasket.addEventListener('click', this.addQuantity.bind(this, camera));
                 quantityProduct.appendChild(buttonQuantityMoreBasket);
 
-                 //Bouton diminuer la quantité
-                 const buttonQuantityLessBasket = document.createElement("button");
-                 buttonQuantityLessBasket.innerText = '-';
-                 buttonQuantityLessBasket.addEventListener('click', this.removeQuantity.bind(this, camera));
-                 quantityProduct.appendChild(buttonQuantityLessBasket);
+                //Bouton diminuer la quantité
+                const buttonQuantityLessBasket = document.createElement("button");
+                buttonQuantityLessBasket.innerText = '-';
+                buttonQuantityLessBasket.addEventListener('click', this.removeQuantity.bind(this, camera));
+                quantityProduct.appendChild(buttonQuantityLessBasket);
 
                 //Bouton supprimer la caméra du panier
-                 const buttonRemoveBasket = document.createElement("button");
-                 buttonRemoveBasket.innerText = "X";
-                 buttonRemoveBasket.addEventListener('click', this.remove.bind(this, camera));
-                 removeProduct.appendChild(buttonRemoveBasket);
+                const buttonRemoveBasket = document.createElement("button");
+                buttonRemoveBasket.innerText = "X";
+                buttonRemoveBasket.addEventListener('click', this.remove.bind(this, camera));
+                removeProduct.appendChild(buttonRemoveBasket);
 
 
         }

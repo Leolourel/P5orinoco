@@ -39,7 +39,7 @@ export default class Camera {
     }
 
     /**
-     * @desc template index.html et produit.html via le dom
+     * @desc template index.html et produit.html display dans le dom
      * @param type
      * @returns {HTMLTemplateElementElement} index, produit
      * @private

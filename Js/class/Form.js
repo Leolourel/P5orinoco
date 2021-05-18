@@ -3,17 +3,17 @@ import Basket from "./Basket.js";
 export default class Form {
 
     /**
-     * @desc
+     * @desc constructor de la classe formulaire, appel de la classe panier pour renvoyer le tableau produits._id en POST
      * @constructor
      */
     constructor() {
+        //Récupération du panier
         const basket = new Basket()
         this.orderContent = Object.keys(basket.content);
 
-        console.log(this.orderContent);
-
         // Events
         let formDom = document.getElementById('formValidity');
+        //Envoi du formulaire au click du bouton valider du formulaire
         if(formDom){
              formDom.addEventListener('submit', this._onValidForm.bind(this))
         }
@@ -22,7 +22,7 @@ export default class Form {
 
 
     /**
-     * @desc
+     * @desc methode display qui affiche le recapitulatif de la commmande sur la page confirmation.html avec l'identifiant de commande
      */
     display() {
 
@@ -35,17 +35,12 @@ export default class Form {
         // todo  pas de panier ne pas afficher le formulaire sur page basket
 
 
-        // // confirmPrice.innerHTML = 'Montant total de votre commande : ' + this;
-        // orderId.innerHTML = 'Votre identifiant de commande : ' + orderSession;
-        // //
-        // // console.log(this.orderContent);
-
     }
 
 
 
     /**
-     * @desc
+     * @desc methode de validation des regex en renvoyant true ou false
      * @param inputField
      * @param pattern
      * @return {boolean}
@@ -84,28 +79,28 @@ export default class Form {
     }
 
 
-
+    /**
+     * @desc méthode qui envoie l'objet contact et le tableau d'id produits au serveur en méthode POST pour recevoir l'id de commande
+     * @param contact paramétre recupérer
+     * @private
+     */
     _createContactOrder(contact) {
 
+        // récupération du tableau d'id produit
         let productId = this.orderContent;
 
+        //Objet contact et tableau id produit envoyé au serveur
         let body = {
             contact : contact,
             products : productId
         }
-
-        console.log(productId);
-
-
-
-        // console.log(formulaireClient);
 
         fetch('http://localhost:3000/api/cameras/order', {
             method: 'POST',
             headers: {
                 'content-type': "application/json"
             },
-            body: JSON.stringify(body),   // formClient
+            body: JSON.stringify(body),
         })
             .then(response => response.json())
             .then(function (orderNumber) {
@@ -163,8 +158,8 @@ export default class Form {
             const cityOk = this._validateField(city, cityRegex);
 
 
-
-        if (emailOk && lastNameOk && firstNameOk && addressOk && cityOk && this.orderContent.length >= 1 ) { //&& this.orderContent.length >= 1
+        // création de l'objet contact si les regex sont bien remplis et que le panier contient au moins un article
+        if (emailOk && lastNameOk && firstNameOk && addressOk && cityOk && this.orderContent.length >= 1 ) {
             let contact = {
                 firstName: firstName.value,
                 lastName: lastName.value,

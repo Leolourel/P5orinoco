@@ -5,6 +5,5 @@ const basket = new Basket();
 const form = new Form();
 
 form.display();
-
 basket.display();
 
