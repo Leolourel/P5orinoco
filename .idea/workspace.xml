@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f400cc3-6492-4f28-aa7a-6123b4ad4f5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/class/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +54,7 @@
       <updated>1617279806675</updated>
       <workItem from="1617279807889" duration="46187000" />
       <workItem from="1620051930417" duration="5641000" />
-      <workItem from="1620061302514" duration="57455000" />
+      <workItem from="1620061302514" duration="57602000" />
     </task>
     <task id="LOCAL-00002" summary="Fin de la methode remove + ajout quantity + display panier (ne fonctionne pas et fait buger le display index)">
       <created>1617308807147</created>
@@ -150,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621513935138</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Code consolider pour les méthodes fetch avec ajout du .catch(error)">
+      <created>1621514411537</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1621514411537</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +187,7 @@
     <MESSAGE value="commit order_id recupéré et display sur la page confirmation" />
     <MESSAGE value="Maj des commentaires du code" />
     <MESSAGE value="modif affichage du panier et du formulaire si panier vide ou avec au moins un produit" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif affichage du panier et du formulaire si panier vide ou avec au moins un produit" />
+    <MESSAGE value="Code consolider pour les méthodes fetch avec ajout du .catch(error)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code consolider pour les méthodes fetch avec ajout du .catch(error)" />
   </component>
 </project>
