@@ -25,12 +25,14 @@ export default class Form {
      * @desc methode display qui affiche le recapitulatif de la commmande sur la page confirmation.html avec l'identifiant de commande et qui affiche le formulaire sur la page panier si le panier n'est pas vide
      */
     display() {
-
+        // Contenair HTML du formulaire
         let formValidate = document.getElementById('containerForm');
 
+        //Si il y'a au moins un produit dans le panier afficher le formulaire
         if(this.orderContent.length >= 1){
             formValidate.classList.remove('displayOnlyValidate');
         }
+
         let storageContact = JSON.parse(sessionStorage.getItem("contact"));
 
         let clientNameDisplay = document.getElementById('nameClient');
@@ -39,7 +41,7 @@ export default class Form {
 
         let orderSession = sessionStorage.getItem("orderId");
 
-
+        //Condition qui permet d'afficher la confirmation que sur la page confirmation.html et n'interfere pas avec panier.html
         if(orderId){
             orderId.innerHTML = 'Votre identifiant de commande : ' + orderSession;
             clientMailDisplay.innerText = storageContact.email;

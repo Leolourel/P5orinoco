@@ -16,6 +16,10 @@ fetch("http://localhost:3000/api/cameras/" + productId)
         camera = new Camera(camera);
         camera.setContainer(productConst);
         camera.display('product');
+    })
+    .catch(function (error){
+        console.log(error)
+
     });
 
 //.catch(error)

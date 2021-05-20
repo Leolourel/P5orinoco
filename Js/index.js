@@ -16,7 +16,10 @@ fetch("http://localhost:3000/api/cameras")
              camera.setContainer(ul);
              camera.display('index');
         })
+    })
+    .catch(function (error){
+        console.log(error)
+
     });
 
-//.catch(error)
 
