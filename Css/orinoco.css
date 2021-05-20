@@ -85,6 +85,14 @@ table tr th {
   border: 2px solid red !important;
 }
 
+.displayOnlyValidate {
+  display: none;
+}
+
+.displayOnlyNoBasket {
+  display: none;
+}
+
 #divImageProduit {
   border: 2px solid black;
   display: flex;

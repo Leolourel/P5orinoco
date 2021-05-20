@@ -48,6 +48,7 @@ export default class Basket {
             cameraFromBasket.quantity++;
             this.content[camera._id] = cameraFromBasket;
         }
+        alert('la caméra est ajouter à votre panier');
         document.location.reload();
         this._saveContentToLocaleStorage();
     }
@@ -93,23 +94,35 @@ export default class Basket {
       *
       */
     display() {
+        console.log(Object.keys(this.content).length);
 
         let tableBasket = document.getElementById('panier');
+        let infoBasket = document.getElementById('infoBasket');
 
         if(!tableBasket){
             return;
         }
 
+
         tableBasket.innerHTML = "";
 
-        //En tete du tableau panier
-        let tableHead = document.createElement('tr');
-        let imageHead = document.createElement('th');
-        let nameHead = document.createElement('th');
-        let descHead = document.createElement('th');
-        let quantityHead = document.createElement('th');
-        let priceHead = document.createElement('th');
-        let suppHead = document.createElement('th');
+         if(Object.keys(this.content).length === 0) {
+             infoBasket.classList.remove('displayOnlyNoBasket');
+         }
+
+         if(Object.keys(this.content).length >= 1){
+             tableBasket.classList.remove('displayOnlyValidate');
+             infoBasket.classList.add('displayOnlyNoBasket');
+         }
+
+         //En tete du tableau panier
+         let tableHead = document.createElement('tr');
+         let imageHead = document.createElement('th');
+         let nameHead = document.createElement('th');
+         let descHead = document.createElement('th');
+         let quantityHead = document.createElement('th');
+         let priceHead = document.createElement('th');
+         let suppHead = document.createElement('th');
 
         //Personnalisation du texte des en tete de la classe panier
         imageHead.innerText = 'IMAGE';

@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="0f400cc3-6492-4f28-aa7a-6123b4ad4f5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Css/orinoco.css" beforeDir="false" afterPath="$PROJECT_DIR$/Css/orinoco.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Css/orinoco.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Css/orinoco.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html/panier.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/panier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/class/Basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Basket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/pages/_panier.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/pages/_panier.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/Orinoco" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../webstorm/WebstormProjects/JS test" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -55,7 +62,7 @@
       <updated>1617279806675</updated>
       <workItem from="1617279807889" duration="46187000" />
       <workItem from="1620051930417" duration="5641000" />
-      <workItem from="1620061302514" duration="48230000" />
+      <workItem from="1620061302514" duration="56309000" />
     </task>
     <task id="LOCAL-00002" summary="Fin de la methode remove + ajout quantity + display panier (ne fonctionne pas et fait buger le display index)">
       <created>1617308807147</created>
@@ -134,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621345860534</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Maj des commentaires du code">
+      <created>1621348093193</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1621348093193</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +179,7 @@
     <MESSAGE value="commit avant Création d'une méthode pour fetch onvalidform" />
     <MESSAGE value="test async function fetch" />
     <MESSAGE value="commit order_id recupéré et display sur la page confirmation" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit order_id recupéré et display sur la page confirmation" />
+    <MESSAGE value="Maj des commentaires du code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maj des commentaires du code" />
   </component>
 </project>

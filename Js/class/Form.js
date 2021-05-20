@@ -22,18 +22,29 @@ export default class Form {
 
 
     /**
-     * @desc methode display qui affiche le recapitulatif de la commmande sur la page confirmation.html avec l'identifiant de commande
+     * @desc methode display qui affiche le recapitulatif de la commmande sur la page confirmation.html avec l'identifiant de commande et qui affiche le formulaire sur la page panier si le panier n'est pas vide
      */
     display() {
 
-        let orderSession = sessionStorage.getItem("orderId")
-        let orderId = document.getElementById('orderId');
+        let formValidate = document.getElementById('containerForm');
+
+        if(this.orderContent.length >= 1){
+            formValidate.classList.remove('displayOnlyValidate');
+        }
+        let storageContact = JSON.parse(sessionStorage.getItem("contact"));
+
+        let clientNameDisplay = document.getElementById('nameClient');
+        let orderId = document.getElementById('orderId')
+        let clientMailDisplay = document.getElementById('clientMail');
+
+        let orderSession = sessionStorage.getItem("orderId");
+
 
         if(orderId){
             orderId.innerHTML = 'Votre identifiant de commande : ' + orderSession;
+            clientMailDisplay.innerText = storageContact.email;
+            clientNameDisplay.innerText = storageContact.firstName + " " + storageContact.lastName;
         }
-        // todo  pas de panier ne pas afficher le formulaire sur page basket
-
 
     }
 
@@ -107,7 +118,7 @@ export default class Form {
                 sessionStorage.setItem("contact", JSON.stringify(contact));
                 sessionStorage.setItem('orderId', orderNumber.orderId);
                 window.location.href = "confirmation.html";
-                // todo clear localStorage (sessionsStorage ?)
+                localStorage.clear();
             })
             //SI PROBLEME API
             .catch(function (error) {

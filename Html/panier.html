@@ -59,14 +59,18 @@
 				<h2>Mon panier</h2>
 			</div>
 			
-			<table class="container" id="panier">
+			<div>
+				<p class="text-center displayOnlyNoBasket" id="infoBasket">Votre panier est vide</p>
+			</div>
+			
+			<table class="container displayOnlyValidate" id="panier">
 
 			</table>
 			
 		</div>
 		
 		
-		<div class="container" >
+		<div id="containerForm" class="container displayOnlyValidate" >
 			<main>
 				<div class="py-5 text-center">
 					<h2>Formulaire de validation</h2>
@@ -148,7 +152,9 @@
 					</div>
 				</div>
 			</main>
-			
+		
+		</div>
+		
 			<footer class="bg-light text-center text-white mt-5">
 				
 				
@@ -160,7 +166,7 @@
 				<!-- Copyright -->
 			</footer>
 		
-		</div>
+		
 		
 		<script type="module" src="../Js/basket.js"></script>
 		<script crossorigin="anonymous"
