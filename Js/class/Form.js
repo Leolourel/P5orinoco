@@ -13,6 +13,7 @@ export default class Form {
 
         // Events
         let formDom = document.getElementById('formValidity');
+
         //Envoi du formulaire au click du bouton valider du formulaire
         if(formDom){
              formDom.addEventListener('submit', this._onValidForm.bind(this))
@@ -64,28 +65,23 @@ export default class Form {
         if(!inputField){
             throw inputField + ' n\'est pas défini'
         }
+
         let regex = new RegExp(pattern, "g");
         let rex = regex.test(inputField.value);
+
         if (!rex) {
             if (inputField.classList.contains("good")) {
                 inputField.classList.remove("good");
                 inputField.classList.add("error");
-                console.log('error');
             } else {
                 inputField.classList.add("error");
-                console.log('error');
-
             }
         } else {
             if (inputField.classList.contains("error")) {
                 inputField.classList.remove("error");
                 inputField.classList.add("good");
-                console.log('good');
-
             } else {
                 inputField.classList.add("good");
-                console.log('good');
-
             }
         }
         return rex;
@@ -171,23 +167,19 @@ export default class Form {
             const cityOk = this._validateField(city, cityRegex);
 
 
-        // création de l'objet contact si les regex sont bien remplis et que le panier contient au moins un article
-        if (emailOk && lastNameOk && firstNameOk && addressOk && cityOk && this.orderContent.length >= 1 ) {
-            let contact = {
-                firstName: firstName.value,
-                lastName: lastName.value,
-                email : mail.value,
-                address : address.value,
-                city : city.value,
+            // création de l'objet contact si les regex sont bien remplis et que le panier contient au moins un article
+            if (emailOk && lastNameOk && firstNameOk && addressOk && cityOk && this.orderContent.length >= 1 ) {
+                let contact = {
+                     firstName: firstName.value,
+                     lastName: lastName.value,
+                     email : mail.value,
+                     address : address.value,
+                     city : city.value,
             };
-            this._createContactOrder(contact)
-        } else {
-            alert('Une erreur est survenue votre panier est peut étre vide ou le formulaire n\'a pas été correctement rempli!')
-        }
-
-
-
-
+                this._createContactOrder(contact)
+            } else {
+                alert('Une erreur est survenue votre panier est peut étre vide ou le formulaire n\'a pas été correctement rempli!')
+            }
     }
 
 

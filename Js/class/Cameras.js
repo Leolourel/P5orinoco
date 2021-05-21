@@ -139,7 +139,6 @@ export default class Camera {
                     select.appendChild(option);
                 };
 
-
                 //Interaction avec le panier
                 const basket = new Basket();
 
@@ -165,7 +164,6 @@ export default class Camera {
      */
     setContainer(container ){
         this.container = container;
-
     }
 
 }

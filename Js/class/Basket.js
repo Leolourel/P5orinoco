@@ -106,23 +106,24 @@ export default class Basket {
 
         tableBasket.innerHTML = "";
 
-         if(Object.keys(this.content).length === 0) {
-             infoBasket.classList.remove('displayOnlyNoBasket');
-         }
+        if(Object.keys(this.content).length === 0) {
+            infoBasket.classList.remove('displayOnlyNoBasket');
+        }
 
-         if(Object.keys(this.content).length >= 1){
-             tableBasket.classList.remove('displayOnlyValidate');
-             infoBasket.classList.add('displayOnlyNoBasket');
-         }
+        if(Object.keys(this.content).length >= 1){
+            tableBasket.classList.remove('displayOnlyValidate');
+            infoBasket.classList.add('displayOnlyNoBasket');
+        }
 
-         //En tete du tableau panier
-         let tableHead = document.createElement('tr');
-         let imageHead = document.createElement('th');
-         let nameHead = document.createElement('th');
-         let descHead = document.createElement('th');
-         let quantityHead = document.createElement('th');
-         let priceHead = document.createElement('th');
-         let suppHead = document.createElement('th');
+        //En tete du tableau panier
+
+        let tableHead = document.createElement('tr');
+        let imageHead = document.createElement('th');
+        let nameHead = document.createElement('th');
+        let descHead = document.createElement('th');
+        let quantityHead = document.createElement('th');
+        let priceHead = document.createElement('th');
+        let suppHead = document.createElement('th');
 
         //Personnalisation du texte des en tete de la classe panier
         imageHead.innerText = 'IMAGE';
@@ -141,12 +142,12 @@ export default class Basket {
         tableHead.appendChild(priceHead);
         tableHead.appendChild(suppHead);
 
-         //Calcul du prix total
-         let totalPrice = 0;
-         for (const [_id, camera] of Object.entries(this.content)) {
+        //Calcul du prix total
+        let totalPrice = 0;
 
-             totalPrice += camera.price/100 * camera.quantity;
-         }
+        for (const [_id, camera] of Object.entries(this.content)) {
+            totalPrice += camera.price/100 * camera.quantity;
+        }
 
         //Pied de page du tableau
         let tableFoot = document.createElement('tfoot');
