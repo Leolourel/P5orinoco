@@ -56,9 +56,13 @@ export default class Basket {
     /**
      * @desc fonction supprimer la caméra du panier
      * @param {Camera} camera
+     * @todo modifier le plan de test avec l'ajout de la boucle if reload la page si plus de caméra dans le panier
      */
     remove(camera) {
         delete this.content[camera._id];
+        if(Object.keys(this.content).length === 0) {
+            document.location.reload();
+        }
         this._saveContentToLocaleStorage();
     }
 
@@ -94,7 +98,6 @@ export default class Basket {
       *
       */
     display() {
-        console.log(Object.keys(this.content).length);
 
         let tableBasket = document.getElementById('panier');
         let infoBasket = document.getElementById('infoBasket');
@@ -206,24 +209,27 @@ export default class Basket {
                 priceProduct.classList.add('borderTd');
                 desctProduct.classList.add('borderTd');
                 imgProductContainer.classList.add('borderTd');
-                quantityProduct.classList.add('borderTd');
+                quantityProduct.classList.add('borderTd','mx-auto');
                 removeProduct.classList.add('borderTd');
 
                 // Bouton augmenter la quantité
                 const buttonQuantityMoreBasket = document.createElement("button");
                 buttonQuantityMoreBasket.innerText = '+';
+                buttonQuantityMoreBasket.classList.add('btn','btn-outline-secondary','text-center');
                 buttonQuantityMoreBasket.addEventListener('click', this.addQuantity.bind(this, camera));
                 quantityProduct.appendChild(buttonQuantityMoreBasket);
 
                 //Bouton diminuer la quantité
                 const buttonQuantityLessBasket = document.createElement("button");
                 buttonQuantityLessBasket.innerText = '-';
+                buttonQuantityLessBasket.classList.add('btn','btn-outline-secondary','text-center');
                 buttonQuantityLessBasket.addEventListener('click', this.removeQuantity.bind(this, camera));
                 quantityProduct.appendChild(buttonQuantityLessBasket);
 
                 //Bouton supprimer la caméra du panier
                 const buttonRemoveBasket = document.createElement("button");
                 buttonRemoveBasket.innerText = "X";
+                buttonRemoveBasket.classList.add('btn','btn-outline-secondary','text-center');
                 buttonRemoveBasket.addEventListener('click', this.remove.bind(this, camera));
                 removeProduct.appendChild(buttonRemoveBasket);
 

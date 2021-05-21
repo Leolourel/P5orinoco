@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0f400cc3-6492-4f28-aa7a-6123b4ad4f5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html/panier.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/panier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html/produits.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/produits.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Basket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/class/Cameras.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Cameras.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/class/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/class/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/product.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
       <updated>1617279806675</updated>
       <workItem from="1617279807889" duration="46187000" />
       <workItem from="1620051930417" duration="5641000" />
-      <workItem from="1620061302514" duration="62585000" />
+      <workItem from="1620061302514" duration="67167000" />
     </task>
     <task id="LOCAL-00002" summary="Fin de la methode remove + ajout quantity + display panier (ne fonctionne pas et fait buger le display index)">
       <created>1617308807147</created>
@@ -165,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621514518930</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fin du projet, commit avant envoi exam&#10;manque une bonne relecture et modif des commentaires">
+      <created>1621601935038</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1621601935038</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +208,7 @@
     <MESSAGE value="modif affichage du panier et du formulaire si panier vide ou avec au moins un produit" />
     <MESSAGE value="Code consolider pour les méthodes fetch avec ajout du .catch(error)" />
     <MESSAGE value="ajout package-lock.json dans gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout package-lock.json dans gitignore" />
+    <MESSAGE value="Fin du projet, commit avant envoi exam&#10;manque une bonne relecture et modif des commentaires" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fin du projet, commit avant envoi exam&#10;manque une bonne relecture et modif des commentaires" />
   </component>
 </project>

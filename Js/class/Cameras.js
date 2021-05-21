@@ -73,7 +73,7 @@ export default class Camera {
 
                 //Ajout des class
                 link.classList.add('row','text-decoration-none','containerproduit');
-                divImg.classList.add('col-4');
+                divImg.classList.add('col-4','px-0');
                 div.classList.add('containerdesc','col-6');
                 divPrice.classList.add('col-2');
                 img.classList.add('imgSize');
@@ -120,8 +120,8 @@ export default class Camera {
 
                 //Personnalisation du text
                 titleProduct.textContent = this.name;
-                descriptionProduct.innerText = this.description;
-                priceProduct.innerText = this.price/100 + ' €';
+                descriptionProduct.innerText = "Déscription : " + this.description;
+                priceProduct.innerText = "Prix : " + this.price/100 + ' €';
 
                 //Création des noeud
                 divContainer.appendChild(divImageProduct);
@@ -145,6 +145,7 @@ export default class Camera {
                 //Création du boutton ajout au panier
                 const addBasket = document.createElement("button");
                 addBasket.innerText = 'Ajouter au panier';
+                addBasket.classList.add('btn','btn-secondary','text-center');
                 addBasket.addEventListener('click', basket.add.bind(basket, this));
                 divTitleDescProduct.appendChild(addBasket);
 
