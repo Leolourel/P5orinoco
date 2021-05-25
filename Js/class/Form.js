@@ -44,7 +44,7 @@ export default class Form {
 
         //Condition qui permet d'afficher la confirmation que sur la page confirmation.html et n'interfere pas avec panier.html
         if(orderId){
-            orderId.innerHTML = 'Votre identifiant de commande : ' + orderSession;
+            orderId.innerHTML = 'Votre identifiant de commande est : ' + orderSession;
             clientMailDisplay.innerText = storageContact.email;
             clientNameDisplay.innerText = storageContact.firstName + " " + storageContact.lastName;
         }
@@ -157,7 +157,7 @@ export default class Form {
 
             let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-            // let zipCodeRegex = /^[0-9]{5}+$/;todo rajouter une validation de la regex pour zipcode
+            // let zipCodeRegex = /^[0-9]{5}+$/;
 
             //Test des différents inputs du formulaire
             const emailOk = this._validateField(mail, emailRegex);
