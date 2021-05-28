@@ -6,6 +6,7 @@ import Camera from "./class/Cameras.js";
  * @async
  * @param {string} url
  * @type {string} template produit
+ * @throws console.log(error)
  */
 const productId = window.location.search.substr(4);
 
@@ -19,7 +20,6 @@ fetch("http://localhost:3000/api/cameras/" + productId)
     })
     .catch(function (error){
         console.log(error)
-
     });
 
 

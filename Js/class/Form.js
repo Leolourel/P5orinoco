@@ -5,11 +5,13 @@ export default class Form {
     /**
      * @desc constructor de la classe formulaire, appel de la classe panier pour renvoyer le tableau produits._id en POST
      * @constructor
+     * @this Basket
+     * @this Form
      */
     constructor() {
         //Récupération du panier
         const basket = new Basket()
-        this.orderContent = Object.keys(basket.content);
+        this.orderContent = basket.content;
 
         // Events
         let formDom = document.getElementById('formValidity');
@@ -26,29 +28,35 @@ export default class Form {
      * @desc methode display qui affiche le recapitulatif de la commmande sur la page confirmation.html avec l'identifiant de commande et qui affiche le formulaire sur la page panier si le panier n'est pas vide
      */
     display() {
-        // Contenair HTML du formulaire
-        let formValidate = document.getElementById('containerForm');
 
-        //Si il y'a au moins un produit dans le panier afficher le formulaire
-        if(this.orderContent.length >= 1){
-            formValidate.classList.remove('displayOnlyValidate');
-        }
 
         let storageContact = JSON.parse(sessionStorage.getItem("contact"));
 
         let clientNameDisplay = document.getElementById('nameClient');
         let orderId = document.getElementById('orderId')
         let clientMailDisplay = document.getElementById('clientMail');
+        let clientTotalPrice = document.getElementById('totalPrice');
 
         let orderSession = sessionStorage.getItem("orderId");
+
+        //Calcul du prix total de la commande
+        let totalPrice = 0;
+        for (const [_id, camera] of Object.entries(this.orderContent)) {
+            totalPrice += camera.price/100 * camera.quantity;
+        }
 
         //Condition qui permet d'afficher la confirmation que sur la page confirmation.html et n'interfere pas avec panier.html
         if(orderId){
             orderId.innerHTML = 'Votre identifiant de commande est : ' + orderSession;
             clientMailDisplay.innerText = storageContact.email;
             clientNameDisplay.innerText = storageContact.firstName + " " + storageContact.lastName;
-        }
+            clientTotalPrice.innerText = 'Le prix total de votre commande est de : ' + totalPrice + ' €';
 
+            //Clear le localStorage si la page de confirmation est quittée
+            window.addEventListener("beforeunload", function (event) {
+                localStorage.clear()
+            });
+        }
     }
 
 
@@ -96,7 +104,7 @@ export default class Form {
     _createContactOrder(contact) {
 
         // récupération du tableau d'id produit
-        let productId = this.orderContent;
+        let productId = Object.keys(this.orderContent);
 
         //Objet contact et tableau id produit envoyé au serveur
         let body = {
@@ -116,7 +124,7 @@ export default class Form {
                 sessionStorage.setItem("contact", JSON.stringify(contact));
                 sessionStorage.setItem('orderId', orderNumber.orderId);
                 window.location.href = "confirmation.html";
-                localStorage.clear();
+                // localStorage.clear();
             })
             //SI PROBLEME API
             .catch(function (error) {
@@ -168,7 +176,7 @@ export default class Form {
 
 
             // création de l'objet contact si les regex sont bien remplis et que le panier contient au moins un article
-            if (emailOk && lastNameOk && firstNameOk && addressOk && cityOk && this.orderContent.length >= 1 ) {
+            if (emailOk && lastNameOk && firstNameOk && addressOk && cityOk && Object.keys(this.orderContent).length >= 1 ) {
                 let contact = {
                      firstName: firstName.value,
                      lastName: lastName.value,

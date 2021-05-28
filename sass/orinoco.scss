@@ -1,13 +1,7 @@
-@import "utils/_variables";
-@import "utils/_mixins";
-@import "utils/animations";
-@import "components/buttons";
 @import "layout/_navbar";
-@import "layout/_footer.scss";
 @import "pages/index";
 @import "pages/panier";
 @import "pages/produits";
-@import "pages/confirmation";
 
 
 a{

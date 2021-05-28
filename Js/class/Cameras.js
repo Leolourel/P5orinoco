@@ -43,6 +43,7 @@ export default class Camera {
      * @param type
      * @returns {HTMLTemplateElementElement} index, produit
      * @private
+     * @throws Aucun template n'est défini
      */
     _getTemplate(type){
         switch(type){

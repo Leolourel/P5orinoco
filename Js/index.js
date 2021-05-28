@@ -6,6 +6,7 @@ import Camera from "./class/Cameras.js";
  * @async
  * @param {string} url
  * @type {string} template Index
+ * @throws console.log(error)
  */
 fetch("http://localhost:3000/api/cameras")
     .then(response => response.json())
@@ -19,7 +20,6 @@ fetch("http://localhost:3000/api/cameras")
     })
     .catch(function (error){
         console.log(error)
-
     });
 
 

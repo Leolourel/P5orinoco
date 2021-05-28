@@ -6,6 +6,7 @@ export default class Basket {
      /**
       * @desc
       * @constructor
+      * @this key Basket localStorage
       */
     constructor() {
         // on vérifi si le localStorage contient un panier
@@ -99,8 +100,10 @@ export default class Basket {
       */
     display() {
 
+
         let tableBasket = document.getElementById('panier');
         let infoBasket = document.getElementById('infoBasket');
+        let formValidate = document.getElementById('containerForm');
 
         if(!tableBasket){
             return;
@@ -117,6 +120,11 @@ export default class Basket {
             tableBasket.classList.remove('displayOnlyValidate');
             infoBasket.classList.add('displayOnlyNoBasket');
         }
+
+         //Si il y'a au moins un produit dans le panier afficher le formulaire
+         if(Object.keys(this.content).length >= 1){
+             formValidate.classList.remove('displayOnlyValidate');
+         }
 
         //En tete du tableau panier
         let tableHead = document.createElement('thead');
