@@ -1,7 +1,6 @@
    
 # Orinoco #
 
-This is the back end server for Project 5 of the Junior Web Developer path.
 
 ### Prerequis ###
 
@@ -9,7 +8,7 @@ Node et npm sont nécessaire et doivent etre installés sur votre machine
 
 ### Installation ###
 
-Clonez ce repositorie. Depuis le dossier du projet, run 'npm install'. 
+Clonez ce repositorie. run 'npm install'. 
 Vous pouvez ensuite run le server avec 'node server'.
 Le server devrait s'executer sur 'localhost' avec le port '3000' par défaut 
 Si le serveur s'execute sur un port différent pour n'importe quelle raison,
